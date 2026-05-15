@@ -24,7 +24,7 @@ Public content corpus for the `statsig-learn` Claude skills published by the Amp
 
 ## How the LXD skills consume this
 
-Skills published in [`amplitude/learning-experience-internal`](https://github.com/amplitude/learning-experience-internal) reference these files via GitHub Pages URLs (`https://amplitude.github.io/statsig-product-education/...`) at query time. That way:
+Skills published in [`amplitude/learning-experience-internal`](https://github.com/amplitude/learning-experience-internal) reference these files via GitHub Pages URLs (`https://nlivni-amplitude.github.io/statsig-product-education/...`) at query time. That way:
 
 - Skills are small (one `.md` file each, distributable as a Slack-friendly attachment)
 - Content updates here propagate immediately on the next `WebFetch` — no plugin re-install
