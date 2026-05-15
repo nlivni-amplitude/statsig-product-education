@@ -1,0 +1,582 @@
+{
+  "fetched_at": "2026-05-15",
+  "purpose": "Pre-computed feature-by-feature mapping between Statsig and Amplitude. Skills (especially statsig-compare-to-amplitude and statsig-ask) read this at query time to avoid having to search the sitemaps from scratch.",
+  "refresh_with": "scripts/refresh-sitemaps.py followed by manual review of any features whose doc URLs changed",
+  "match_quality_legend": {
+    "close": "~1:1 conceptually. Different visual style or naming, same underlying capability.",
+    "partial": "Both products have something, but shape, first-class-ness, or coupling differs.",
+    "none": "One product has it, the other doesn't (or only via integration)."
+  },
+  "audit_flagged_shallow_legend": "When true, the Statsig Academy corpus covers this topic shallowly. The skill should preferentially WebFetch the Statsig doc URLs to compensate.",
+  "total_features": 27,
+  "features": [
+    {
+      "feature": "Experiments (A/B testing)",
+      "statsig_concept": "Experiments",
+      "amplitude_concept": "Amplitude Experiment",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/experiments/monitor",
+        "https://docs.statsig.com/experiments/overview",
+        "https://docs.statsig.com/experiments/create-new"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/feature-experiment",
+        "https://amplitude.com/docs/feature-experiment/overview",
+        "https://amplitude.com/docs/feature-experiment/key-terms"
+      ],
+      "topic_file": "05-experiments.md",
+      "key_differences": [
+        "Both run A/B and multivariate tests with scorecards and statistical analysis",
+        "Statsig per-user normalizes by default; Amplitude has options",
+        "Both support warehouse-native modes"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Warehouse-Native Experimentation",
+      "statsig_concept": "Statsig Warehouse Native",
+      "amplitude_concept": "Amplitude Experiment (warehouse mode)",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/statsig-warehouse-native/guides/sql",
+        "https://docs.statsig.com/statsig-warehouse-native/metrics/sum",
+        "https://docs.statsig.com/statsig-warehouse-native/metrics/log"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/web-experiment",
+        "https://amplitude.com/docs/feature-experiment",
+        "https://amplitude.com/docs/web-experiment/proxy"
+      ],
+      "topic_file": "05-experiments.md",
+      "key_differences": [
+        "Both query the customer's data warehouse directly instead of streaming events",
+        "Different schema configuration patterns; same underlying statistical compute"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "CUPED (variance reduction)",
+      "statsig_concept": "CUPED",
+      "amplitude_concept": "Variance reduction in Amplitude Experiment",
+      "match_quality": "partial",
+      "statsig_docs": [
+        "https://docs.statsig.com/experiments/statistical-methods/variance",
+        "https://docs.statsig.com/experiments/statistical-methods/variance-reduction",
+        "https://docs.statsig.com/experiments/statistical-methods/methodologies/cuped"
+      ],
+      "amplitude_docs": [],
+      "topic_file": "08-data-and-metrics.md",
+      "key_differences": [
+        "Both reduce noise using pre-experiment behavior as a covariate",
+        "Statsig markets CUPED more prominently as a first-class feature"
+      ],
+      "audit_flagged_shallow": true
+    },
+    {
+      "feature": "Multi-Arm Bandits",
+      "statsig_concept": "Autotune / Multi-arm bandits",
+      "amplitude_concept": "(No direct Amplitude equivalent)",
+      "match_quality": "none",
+      "statsig_docs": [
+        "https://docs.statsig.com/autotune/bandit-faq",
+        "https://docs.statsig.com/autotune/using-bandits",
+        "https://docs.statsig.com/autotune/multi-armed-bandit"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/feature-experiment/workflow/multi-armed-bandit-experiments"
+      ],
+      "topic_file": "05-experiments.md",
+      "key_differences": [
+        "Statsig has built-in multi-arm bandit experiments (Autotune)",
+        "Amplitude lacks a direct equivalent \u2014 typically requires integration"
+      ],
+      "audit_flagged_shallow": true
+    },
+    {
+      "feature": "Holdouts",
+      "statsig_concept": "Holdouts",
+      "amplitude_concept": "Holdout cohorts in Amplitude Experiment",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/experiments/holdouts-introduction",
+        "https://docs.statsig.com/api-reference/holdouts/list-holdouts",
+        "https://docs.statsig.com/api-reference/holdouts/create-holdout"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/apis/experiment/experiment-management-api-holdouts",
+        "https://amplitude.com/docs/apis/experiment/experiment-management-api-holdout-group-endpoints",
+        "https://amplitude.com/docs/feature-experiment/advanced-techniques/holdout-groups-exclude-users"
+      ],
+      "topic_file": "05-experiments.md",
+      "key_differences": [
+        "Same statistical concept on both sides",
+        "Used to measure program-level impact (not single-experiment)"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Layers / Mutually Exclusive Experiments",
+      "statsig_concept": "Layers",
+      "amplitude_concept": "Shared layers in Amplitude Experiment",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/experiments/layers-overview",
+        "https://docs.statsig.com/api-reference/layers/get-layers",
+        "https://docs.statsig.com/api-reference/layers/get-one-layer"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/feature-experiment/advanced-techniques/mutually-exclusive-experiments"
+      ],
+      "topic_file": "05-experiments.md",
+      "key_differences": [
+        "Both prevent interaction effects across overlapping experiments",
+        "Different UI for assignment; same conceptual model"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Targeting Rules",
+      "statsig_concept": "Targeting rules and conditions",
+      "amplitude_concept": "Cohort + Experiment Audience",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/segments/add-rule",
+        "https://docs.statsig.com/dynamic-config/add-rule",
+        "https://docs.statsig.com/api-reference/gates/add-gate-rule"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/feature-experiment/cohort-targeting",
+        "https://amplitude.com/docs/data/audiences",
+        "https://amplitude.com/docs/analytics/define-cohort"
+      ],
+      "topic_file": "03-feature-flags.md",
+      "key_differences": [
+        "Both filter users by attributes, event history, custom properties",
+        "Mechanics and rule-builder UI differ"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Pulse / Scorecard",
+      "statsig_concept": "Pulse / Scorecard",
+      "amplitude_concept": "Experiment Results",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/api-reference/gates/retrieve-pulse-results",
+        "https://docs.statsig.com/api-reference/holdouts/retrieve-pulse-results",
+        "https://docs.statsig.com/api-reference/experiments/retrieve-pulse-results-beta"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/get-started/analyze-a-b-test-results",
+        "https://amplitude.com/docs/analytics/charts/experiment-results/experiment-results-dig-deeper",
+        "https://amplitude.com/docs/analytics/charts/data-tables/data-tables-results-and-sorting-logic"
+      ],
+      "topic_file": "05-experiments.md",
+      "key_differences": [
+        "Same idea: confidence intervals, lift, significance",
+        "Different visual style; Statsig per-user normalizes by default"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Feature Gates / Feature Flags",
+      "statsig_concept": "Feature Gates",
+      "amplitude_concept": "Amplitude Experiment flags",
+      "match_quality": "partial",
+      "statsig_docs": [
+        "https://docs.statsig.com/feature-flags/test-gate",
+        "https://docs.statsig.com/feature-flags/permanent-and-stale-gates",
+        "https://docs.statsig.com/feature-flags/create"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/feature-experiment/stale-flag-management",
+        "https://amplitude.com/docs/feature-experiment/workflow/feature-flag-rollouts",
+        "https://amplitude.com/docs/feature-experiment/under-the-hood/flag-dependencies"
+      ],
+      "topic_file": "03-feature-flags.md",
+      "key_differences": [
+        "Both target users by attributes with pass-percentages",
+        "Statsig auto-promotes gates to A/B tests; Amplitude separates flag from experiment more cleanly",
+        "Different SDK API shapes"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Dynamic Configs",
+      "statsig_concept": "Dynamic Configs",
+      "amplitude_concept": "Amplitude Experiment payloads",
+      "match_quality": "partial",
+      "statsig_docs": [
+        "https://docs.statsig.com/dynamic-config/overview",
+        "https://docs.statsig.com/dynamic-config/add-rule",
+        "https://docs.statsig.com/dynamic-config/create-new"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/data/configure-schema",
+        "https://amplitude.com/docs/sdks/dynamic-configuration",
+        "https://amplitude.com/docs/assistant/configure-assistant"
+      ],
+      "topic_file": "04-dynamic-configs.md",
+      "key_differences": [
+        "Statsig Dynamic Configs are first-class objects with dedicated SDK calls",
+        "Amplitude payloads are an attribute of an experiment variant"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Overrides",
+      "statsig_concept": "Overrides",
+      "amplitude_concept": "User overrides in Amplitude Experiment",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/feature-flags/overrides",
+        "https://docs.statsig.com/experiments/setup/overrides",
+        "https://docs.statsig.com/api-reference/gates/get-gate-override"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/data/override-property"
+      ],
+      "topic_file": "03-feature-flags.md",
+      "key_differences": [
+        "Both allow manual user-level opt-in/out of a flag/gate",
+        "Use for one-off testing and demos, not as a permanent fix for rule bugs"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Scheduled Rollouts",
+      "statsig_concept": "Scheduled rollouts",
+      "amplitude_concept": "Rollout schedule in Amplitude Experiment",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/feature-flags/scheduled-rollouts",
+        "https://docs.statsig.com/metrics/rollout-alerts",
+        "https://docs.statsig.com/feature-flags/multiple-rollout-stages"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/feature-experiment/workflow/feature-flag-rollouts"
+      ],
+      "topic_file": "03-feature-flags.md",
+      "key_differences": [
+        "Progressive percentage rollouts (1% \u2192 5% \u2192 100%)",
+        "Both support automatic revert on guardrail regression"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Product Analytics (suite)",
+      "statsig_concept": "Product Analytics",
+      "amplitude_concept": "Amplitude Analytics",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/product-analytics/funnels",
+        "https://docs.statsig.com/product-analytics/overview",
+        "https://docs.statsig.com/product-analytics/users-tab"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/analytics",
+        "https://amplitude.com/docs/sdks/analytics",
+        "https://amplitude.com/docs/analytics/search"
+      ],
+      "topic_file": "06-product-analytics.md",
+      "key_differences": [
+        "Both have funnels, retention, dashboards, drilldown",
+        "Amplitude is more mature: Pathfinder, Compass, Personas, Stickiness, Recommendations"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Funnels",
+      "statsig_concept": "Funnels",
+      "amplitude_concept": "Funnel Analysis",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/product-analytics/funnels",
+        "https://docs.statsig.com/metrics/create-user-funnels",
+        "https://docs.statsig.com/statsig-warehouse-native/metrics/funnel"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/analytics/charts/funnel-analysis/faq",
+        "https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-build",
+        "https://amplitude.com/docs/analytics/charts/funnel-analysis/funnel-analysis-ab-test"
+      ],
+      "topic_file": "06-product-analytics.md",
+      "key_differences": [
+        "Near-1:1 conceptually",
+        "Both compute conversion rate, drop-off, time-to-convert across ordered steps"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Retention",
+      "statsig_concept": "Retention",
+      "amplitude_concept": "Retention Analysis",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/product-analytics/retention",
+        "https://docs.statsig.com/statsig-warehouse-native/metrics/retention"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/analytics/charts/retention-analysis/faq",
+        "https://amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time",
+        "https://amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-build"
+      ],
+      "topic_file": "06-product-analytics.md",
+      "key_differences": [
+        "Both bucket users by cohort and measure return rate at time intervals"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "User Journeys / Paths",
+      "statsig_concept": "User Journeys",
+      "amplitude_concept": "Pathfinder / Compass",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/product-analytics/user-journeys"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/analytics/charts/legacy-charts/legacy-charts-pathfinder",
+        "https://amplitude.com/docs/analytics/charts/legacy-charts/legacy-charts-pathfinder-users",
+        "https://amplitude.com/docs/analytics/charts/compass/compass-aha-moment"
+      ],
+      "topic_file": "06-product-analytics.md",
+      "key_differences": [
+        "Both show paths between events",
+        "Amplitude has multiple path-analysis surfaces (Pathfinder, Compass) with different defaults"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Metric Drilldown",
+      "statsig_concept": "Metric Drilldown",
+      "amplitude_concept": "Segmentation",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/product-analytics/drilldown"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/analytics/charts/event-segmentation/faq",
+        "https://amplitude.com/docs/analytics/charts/build-charts-segmentation-module",
+        "https://amplitude.com/docs/analytics/charts/event-segmentation/event-segmentation-build"
+      ],
+      "topic_file": "06-product-analytics.md",
+      "key_differences": [
+        "Both slice a single metric by user/event properties to investigate movement",
+        "Different naming for similar UX"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Distribution Charts",
+      "statsig_concept": "Distribution",
+      "amplitude_concept": "Distribution / Histogram",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/product-analytics/distribution"
+      ],
+      "amplitude_docs": [],
+      "topic_file": "06-product-analytics.md",
+      "key_differences": [
+        "Both surface population shape (clusters, long tail) that averages hide"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Dashboards",
+      "statsig_concept": "Dashboards",
+      "amplitude_concept": "Dashboards / Notebooks",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/product-analytics/dashboards",
+        "https://docs.statsig.com/api-reference/dashboards/read-dashboard",
+        "https://docs.statsig.com/api-reference/dashboards/list-dashboards"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/analytics/notebooks",
+        "https://amplitude.com/docs/analytics/share-dashboards",
+        "https://amplitude.com/docs/analytics/dashboard-filter"
+      ],
+      "topic_file": "06-product-analytics.md",
+      "key_differences": [
+        "Both let you combine multiple charts into a saved view",
+        "Amplitude has Notebooks for narrative-style analysis"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Session Replay",
+      "statsig_concept": "Session Replay",
+      "amplitude_concept": "Amplitude Session Replay",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/session-replay/watch",
+        "https://docs.statsig.com/session-replay/debug",
+        "https://docs.statsig.com/session-replay/privacy"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/session-replay",
+        "https://amplitude.com/docs/session-replay/heatmaps",
+        "https://amplitude.com/docs/analytics/session-replay"
+      ],
+      "topic_file": "07-session-replay.md",
+      "key_differences": [
+        "Both record DOM + interactions, play back",
+        "Statsig anchors to experiments; Amplitude anchors to Analytics charts",
+        "Pricing and sampling specifics differ"
+      ],
+      "audit_flagged_shallow": true
+    },
+    {
+      "feature": "Metric Catalog",
+      "statsig_concept": "Metric Catalog",
+      "amplitude_concept": "Event Taxonomy + Custom Metrics",
+      "match_quality": "partial",
+      "statsig_docs": [
+        "https://docs.statsig.com/metrics/301",
+        "https://docs.statsig.com/metrics/201",
+        "https://docs.statsig.com/metrics/101"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/data/taxonomy-api",
+        "https://amplitude.com/docs/analytics/metrics",
+        "https://amplitude.com/docs/data/warehouse-metrics"
+      ],
+      "topic_file": "08-data-and-metrics.md",
+      "key_differences": [
+        "Statsig: first-class central registry of metric definitions",
+        "Amplitude: event-stream-shaped, metrics built ad-hoc in each chart with Custom Metrics available"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Event Ingestion",
+      "statsig_concept": "Event ingestion (SDK / CDP / warehouse)",
+      "amplitude_concept": "Event ingestion (SDK / Segment / warehouse)",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/api-reference/ingestions/get-ingestion-event-count",
+        "https://docs.statsig.com/api-reference/ingestions/get-ingestion-event-delta-ledger",
+        "https://docs.statsig.com/metrics/ingest"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/partners/create-an-event-ingestion-integration",
+        "https://amplitude.com/docs/feature-experiment/under-the-hood/event-tracking",
+        "https://amplitude.com/docs/data/custom-events"
+      ],
+      "topic_file": "08-data-and-metrics.md",
+      "key_differences": [
+        "Both support direct SDK, CDP relay (Segment/RudderStack), and warehouse import",
+        "Statsig favors Metric Catalog as central registry; Amplitude favors event taxonomy"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Client SDK",
+      "statsig_concept": "Client SDK",
+      "amplitude_concept": "Amplitude Browser/iOS/Android SDK",
+      "match_quality": "partial",
+      "statsig_docs": [
+        "https://docs.statsig.com/client/CPP",
+        "https://docs.statsig.com/client/Roku",
+        "https://docs.statsig.com/client/Next"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/sdks/analytics/ios",
+        "https://amplitude.com/docs/sdks/analytics/browser",
+        "https://amplitude.com/docs/sdks/analytics/android"
+      ],
+      "topic_file": "02-sdks-setup.md",
+      "key_differences": [
+        "Statsig client SDK does flags + experiments + exposures + analytics in one",
+        "Amplitude splits Analytics SDK and Experiment SDK; more modular, more wiring"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Server SDK",
+      "statsig_concept": "Server SDK",
+      "amplitude_concept": "Amplitude Node/Python/Java SDK",
+      "match_quality": "partial",
+      "statsig_docs": [
+        "https://docs.statsig.com/server/go",
+        "https://docs.statsig.com/server/php",
+        "https://docs.statsig.com/server/cpp"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/sdks/analytics/node",
+        "https://amplitude.com/docs/sdks/analytics/java",
+        "https://amplitude.com/docs/sdks/analytics/python"
+      ],
+      "topic_file": "02-sdks-setup.md",
+      "key_differences": [
+        "Same modular split as client side",
+        "Statsig bundles; Amplitude separates analytics from experiment evaluation"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Org / Project / Team Structure",
+      "statsig_concept": "Organization / Project / Team",
+      "amplitude_concept": "Org / Workspace / Project",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/access-management/teams",
+        "https://docs.statsig.com/access-management/projects",
+        "https://docs.statsig.com/access-management/organizations"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/admin/account-management/manage-orgs-projects",
+        "https://amplitude.com/docs/analytics/workspace",
+        "https://amplitude.com/docs/get-started/create-project"
+      ],
+      "topic_file": "09-org-and-project-settings.md",
+      "key_differences": [
+        "Org \u2192 Org and Project \u2192 Workspace map cleanly",
+        "Naming confusion: Statsig 'Team' \u2248 Amplitude 'Project' (at the team-equivalent tier)"
+      ],
+      "audit_flagged_shallow": false
+    },
+    {
+      "feature": "Target Apps",
+      "statsig_concept": "Target Apps",
+      "amplitude_concept": "(No direct Amplitude equivalent)",
+      "match_quality": "none",
+      "statsig_docs": [
+        "https://docs.statsig.com/sdks/target-apps",
+        "https://docs.statsig.com/api-reference/target-app/read-target-app",
+        "https://docs.statsig.com/api-reference/target-app/list-target-apps"
+      ],
+      "amplitude_docs": [],
+      "topic_file": "09-org-and-project-settings.md",
+      "key_differences": [
+        "Statsig has scoped-context Target Apps as a first-class object",
+        "Amplitude scopes via user properties or environment filters instead"
+      ],
+      "audit_flagged_shallow": true
+    },
+    {
+      "feature": "SSO / RBAC",
+      "statsig_concept": "SSO + Role-based access",
+      "amplitude_concept": "SSO + RBAC",
+      "match_quality": "close",
+      "statsig_docs": [
+        "https://docs.statsig.com/access-management/sso/google",
+        "https://docs.statsig.com/access-management/sso/azuread",
+        "https://docs.statsig.com/access-management/sso/overview"
+      ],
+      "amplitude_docs": [
+        "https://amplitude.com/docs/admin/account-management/manage-rbac-roles",
+        "https://amplitude.com/docs/admin/account-management/role-based-access-controls-rbac",
+        "https://amplitude.com/docs/admin/single-sign-on/sso"
+      ],
+      "topic_file": "09-org-and-project-settings.md",
+      "key_differences": [
+        "Both support SAML SSO with major IdPs",
+        "Both have admin/editor/viewer-style roles with project-level scoping"
+      ],
+      "audit_flagged_shallow": false
+    }
+  ]
+}

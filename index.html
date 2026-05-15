@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Statsig Product Education — Content</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { max-width: 720px; margin: 2rem auto; padding: 0 1rem; font: 16px/1.55 -apple-system, system-ui, sans-serif; color: #222; }
+  h1 { border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; }
+  code { background: #f4f4f4; padding: 0.1rem 0.3rem; border-radius: 3px; font-size: 0.9em; }
+  pre { background: #f4f4f4; padding: 0.8rem; border-radius: 4px; overflow-x: auto; }
+  a { color: #0366d6; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { padding: 0.4rem 0.6rem; text-align: left; border-bottom: 1px solid #eee; }
+  th { background: #f9f9f9; }
+  .note { background: #fffbe6; border-left: 3px solid #f0c84a; padding: 0.6rem 0.8rem; margin: 1rem 0; }
+</style>
+</head>
+<body>
+<h1>Statsig Product Education — Content</h1>
+<p>Public content corpus consumed by the <code>statsig-learn</code> Claude skills published by Amplitude LXD.</p>
+
+<p class="note">All content here is derived from publicly-accessible sources (Statsig Academy courses, public Wistia video captions, public Statsig and Amplitude docs).</p>
+
+<h2>Quick links</h2>
+<table>
+  <tr><th>Path</th><th>Contents</th></tr>
+  <tr><td><a href="topics/">topics/</a></td><td>11 LXD-curated topic files (LOs + canonical answers)</td></tr>
+  <tr><td><a href="corpus/courses/">corpus/courses/</a></td><td>3 Statsig Academy course MDs</td></tr>
+  <tr><td><a href="corpus/captions/">corpus/captions/</a></td><td>41 lesson video captions</td></tr>
+  <tr><td><a href="corpus/captions-combined/">corpus/captions-combined/</a></td><td>3 combined-by-course caption files</td></tr>
+  <tr><td><a href="indexes/">indexes/</a></td><td>Cross-reference indexes (Academy, Wistia, YouTube, docs sitemaps, feature inventory)</td></tr>
+</table>
+
+<h2>How skills consume this</h2>
+<p>Skills published at <a href="https://github.com/amplitude/learning-experience-internal">amplitude/learning-experience-internal</a> reference these files at query time via <code>WebFetch</code> to URLs like:</p>
+<pre>https://amplitude.github.io/statsig-product-education/topics/05-experiments.md
+https://amplitude.github.io/statsig-product-education/indexes/feature-comparison-inventory.json</pre>
+
+<p>This means:</p>
+<ul>
+  <li>Skills are small (one <code>.md</code> file each) and distributable without a plugin install</li>
+  <li>Content updates here propagate immediately on the next fetch — no re-install needed</li>
+</ul>
+
+<h2>Sources</h2>
+<ul>
+  <li><strong>Statsig Academy courses</strong> — <a href="https://academy.amplitude.com/statsig-101">academy.amplitude.com</a></li>
+  <li><strong>Statsig docs</strong> — <a href="https://docs.statsig.com">docs.statsig.com</a></li>
+  <li><strong>Amplitude docs</strong> — <a href="https://amplitude.com/docs">amplitude.com/docs</a></li>
+</ul>
+
+<h2>Maintainer</h2>
+<p>Amplitude Learning Experience Design (LXD) — Nathan Livni (<code>nathan.livni@amplitude.com</code>).</p>
+<p>Source on GitHub: <a href="https://github.com/amplitude/statsig-product-education">amplitude/statsig-product-education</a></p>
+</body>
+</html>

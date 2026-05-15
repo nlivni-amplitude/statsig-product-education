@@ -1,0 +1,34 @@
+{
+  "description": "Statsig courses on Amplitude Academy (Skilljar). Use to footnote answers that draw from a specific course.",
+  "as_of": "2026-05-14",
+  "domain": "academy.amplitude.com",
+  "courses": [
+    {
+      "title": "Statsig Product Onboarding",
+      "slug": "statsig-product-onboarding",
+      "url": "https://academy.amplitude.com/statsig-product-onboarding",
+      "course_id": "3br9jvin97ern",
+      "published_id": "mj1d2twur3hw",
+      "covers": ["Experiments Deep Dive", "Feature Gates Deep Dive", "Product Analytics Deep Dive", "Product Best Practices"],
+      "matches_raw_file": "data/raw/courses/statsig-1-product-onboarding.md"
+    },
+    {
+      "title": "Statsig 101",
+      "slug": "statsig-101",
+      "url": "https://academy.amplitude.com/statsig-101",
+      "course_id": "2ogt0vzeph2nh",
+      "published_id": "xaa3atlu5ued",
+      "covers": ["Introduction", "Setting up Statsig", "Feature Management", "Experiments", "Product Analytics", "Powering Product Dev Lifecycle"],
+      "matches_raw_file": "data/raw/courses/statsig-2-statsig-101.md"
+    },
+    {
+      "title": "Setting Up Statsig",
+      "slug": "setting-up-statsig",
+      "url": "https://academy.amplitude.com/setting-up-statsig",
+      "course_id": "33vu8vpqhp9ic",
+      "published_id": "1bp9ynnxu7gfc",
+      "covers": ["Overview", "Install and Initialize SDK", "Connect Events and Metrics", "Organization and Project Settings", "Next Steps and Support Resources"],
+      "matches_raw_file": "data/raw/courses/statsig-3-setting-up-statsig.md"
+    }
+  ]
+}

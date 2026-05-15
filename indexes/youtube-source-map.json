@@ -1,0 +1,2294 @@
+{
+  "description": "Statsig YouTube channel inventory (237 videos / 36.8 hrs total). Use to footnote answers that draw from YouTube content. Most strategic/cultural content lives here, not in formal courses.",
+  "as_of": "2026-05-08",
+  "channel": {
+    "name": "Statsig",
+    "url": "https://www.youtube.com/@statsig_official",
+    "video_count": 237,
+    "shorts_count": 45,
+    "total_duration_seconds": 234456,
+    "total_duration_hours": 65.1,
+    "approx_total_bytes": 54580493779,
+    "approx_total_gb": 54.58
+  },
+  "playlists": [
+    {
+      "id": "PLNJ9pKAaib3IoDX2mhv9SFYxz8CvCiI-t",
+      "title": "Customer Stories",
+      "video_count": 5
+    },
+    {
+      "id": "PLNJ9pKAaib3L9P2U-Pd8j16Tp_a2YPyL5",
+      "title": "Use Cases",
+      "video_count": 10
+    },
+    {
+      "id": "PLNJ9pKAaib3KtSSxuR7hbyeJjMbT6xrwA",
+      "title": "Experimentation Meetup 2025",
+      "video_count": 6
+    },
+    {
+      "id": "PLNJ9pKAaib3KrYRHFT9xhISYEg78jiZbJ",
+      "title": "Sigsum 2025",
+      "video_count": 19
+    },
+    {
+      "id": "PLNJ9pKAaib3IkL_qsnw6NtqX7LCEopHdO",
+      "title": "Experimentation Week",
+      "video_count": 3
+    },
+    {
+      "id": "PLNJ9pKAaib3KGuctKYy9UIKzJ2n6er-_w",
+      "title": "Launch Moments",
+      "video_count": 6
+    },
+    {
+      "id": "PLNJ9pKAaib3J0F3MvVX-OZ9ZxkOjmktry",
+      "title": "Statsig Warehouse Native How-tos",
+      "video_count": 2
+    },
+    {
+      "id": "PLNJ9pKAaib3LvMfeV5Gt8BhaiH4tRtlEC",
+      "title": "Acquired Minisodes: powered by Statsig",
+      "video_count": 8
+    },
+    {
+      "id": "PLNJ9pKAaib3KkLMYZpH9x6RTEunHN43rs",
+      "title": "Significance Summit On-demand",
+      "video_count": 7
+    },
+    {
+      "id": "PLNJ9pKAaib3J0fYyCYRX3JhtSpwtiEL0Q",
+      "title": "Statsig Onboarding Training Videos",
+      "video_count": 14
+    },
+    {
+      "id": "PLNJ9pKAaib3Iy4EiT-Qk2unzca8Psihkf",
+      "title": "Events On-Demand",
+      "video_count": 8
+    },
+    {
+      "id": "PLNJ9pKAaib3J0Vey2V7Sf9T_nsgoA6Hex",
+      "title": "Statsig Product Walkthroughs",
+      "video_count": 9
+    },
+    {
+      "id": "PLNJ9pKAaib3KTeVdVGlmJawqX5Ulu3MG9",
+      "title": "Learning Labs",
+      "video_count": 3
+    },
+    {
+      "id": "PLNJ9pKAaib3JAQ4DtEHspMIl-NHm8L_OO",
+      "title": "Virtual Meetups",
+      "video_count": 15
+    },
+    {
+      "id": "PLNJ9pKAaib3LKKSEpMTlHjLfCzhSKI_dC",
+      "title": "Customer Success Stories",
+      "video_count": 1
+    },
+    {
+      "id": "PLNJ9pKAaib3LUW_f8qX8u-jbmE2pUqLBQ",
+      "title": "Statsig for Dummies",
+      "video_count": 4
+    },
+    {
+      "id": "PLNJ9pKAaib3LOnDm3ExnBTkko-x9xBpbl",
+      "title": "Tech Talks",
+      "video_count": 3
+    },
+    {
+      "id": "PLNJ9pKAaib3JvUiHaz9-UyaYtIOO29CjJ",
+      "title": "Tutorials",
+      "video_count": 7
+    }
+  ],
+  "videos": {
+    "uxV0teHXBjA": {
+      "title": "Advanced methods for faster experimentation",
+      "url": "https://www.youtube.com/watch?v=uxV0teHXBjA",
+      "duration": 3834,
+      "upload_date": "20260129",
+      "playlists": [],
+      "is_short": false
+    },
+    "TlAg-_LjEOc": {
+      "title": "NextDoor x Statsig Customer Story",
+      "url": "https://www.youtube.com/watch?v=TlAg-_LjEOc",
+      "duration": 231,
+      "upload_date": "20260126",
+      "playlists": [
+        "Customer Stories"
+      ],
+      "is_short": false
+    },
+    "EZcplcvRJxU": {
+      "title": "Brex x Statsig Customer Story",
+      "url": "https://www.youtube.com/watch?v=EZcplcvRJxU",
+      "duration": 214,
+      "upload_date": "20260112",
+      "playlists": [
+        "Customer Stories"
+      ],
+      "is_short": false
+    },
+    "-d0AHF_LGis": {
+      "title": "Life360 x Statsig Customer Story",
+      "url": "https://www.youtube.com/watch?v=-d0AHF_LGis",
+      "duration": 185,
+      "upload_date": "20260109",
+      "playlists": [
+        "Customer Stories"
+      ],
+      "is_short": false
+    },
+    "EM1ykHNKHNc": {
+      "title": "Statsig MCP Server Overview",
+      "url": "https://www.youtube.com/watch?v=EM1ykHNKHNc",
+      "duration": 161,
+      "upload_date": "20251222",
+      "playlists": [
+        "Launch Moments"
+      ],
+      "is_short": false
+    },
+    "zH0Tj6_RZg4": {
+      "title": "Grammarly x Statsig Customer Story",
+      "url": "https://www.youtube.com/watch?v=zH0Tj6_RZg4",
+      "duration": 190,
+      "upload_date": "20251216",
+      "playlists": [
+        "Customer Stories"
+      ],
+      "is_short": false
+    },
+    "YXqC17qScr0": {
+      "title": "Hinge Health x Statsig Customer Story",
+      "url": "https://www.youtube.com/watch?v=YXqC17qScr0",
+      "duration": 134,
+      "upload_date": "20251216",
+      "playlists": [
+        "Customer Stories"
+      ],
+      "is_short": false
+    },
+    "jSqUgjPnSc4": {
+      "title": "Funnel Conversion & Drop-offs | Use Cases",
+      "url": "https://www.youtube.com/watch?v=jSqUgjPnSc4",
+      "duration": 71,
+      "upload_date": "20251215",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "sZnAZQTyBoo": {
+      "title": "Experiment Summaries | Use Cases",
+      "url": "https://www.youtube.com/watch?v=sZnAZQTyBoo",
+      "duration": 65,
+      "upload_date": "20251215",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "6cIhx0HTW2M": {
+      "title": "De-Risk Your Rollouts | Use Cases",
+      "url": "https://www.youtube.com/watch?v=6cIhx0HTW2M",
+      "duration": 45,
+      "upload_date": "20251215",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "A9PKi5ZTCts": {
+      "title": "Experiment Templates | Use Cases",
+      "url": "https://www.youtube.com/watch?v=A9PKi5ZTCts",
+      "duration": 74,
+      "upload_date": "20251215",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "oYrU91GAang": {
+      "title": "Conversion Drivers | Use Cases",
+      "url": "https://www.youtube.com/watch?v=oYrU91GAang",
+      "duration": 47,
+      "upload_date": "20251215",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "YHZVOE2ZwOc": {
+      "title": "Conversion Drivers | Use Cases",
+      "url": "https://www.youtube.com/watch?v=YHZVOE2ZwOc",
+      "duration": 38,
+      "upload_date": "20251215",
+      "playlists": [],
+      "is_short": false
+    },
+    "Jg67LsUj4Lc": {
+      "title": "Automated Experiments | Use Cases",
+      "url": "https://www.youtube.com/watch?v=Jg67LsUj4Lc",
+      "duration": 67,
+      "upload_date": "20251215",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "GZ5RoVSCGrI": {
+      "title": "Automated Experiments | Use Cases",
+      "url": "https://www.youtube.com/watch?v=GZ5RoVSCGrI",
+      "duration": 67,
+      "upload_date": "20251215",
+      "playlists": [],
+      "is_short": false
+    },
+    "QXu401PO07c": {
+      "title": "Conversion Drivers | Use Cases",
+      "url": "https://www.youtube.com/watch?v=QXu401PO07c",
+      "duration": 44,
+      "upload_date": "20251215",
+      "playlists": [],
+      "is_short": false
+    },
+    "y_ZOGCc_ZTw": {
+      "title": "Holdouts 101 | Use Cases",
+      "url": "https://www.youtube.com/watch?v=y_ZOGCc_ZTw",
+      "duration": 58,
+      "upload_date": "20251215",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "PeZV3PTFDAg": {
+      "title": "User Journeys | Use Cases",
+      "url": "https://www.youtube.com/watch?v=PeZV3PTFDAg",
+      "duration": 45,
+      "upload_date": "20251215",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "tneRWgZGWxM": {
+      "title": "Experimentation and Causal Inference Debate | Statsig",
+      "url": "https://www.youtube.com/watch?v=tneRWgZGWxM",
+      "duration": 3890,
+      "upload_date": "20251212",
+      "playlists": [],
+      "is_short": false
+    },
+    "WT275wxZlQs": {
+      "title": "Velocity Dashboards | Use Cases",
+      "url": "https://www.youtube.com/watch?v=WT275wxZlQs",
+      "duration": 47,
+      "upload_date": "20251125",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "uly4V0CgtEE": {
+      "title": "Funnel Conversions & Drop-Offs | Use Cases",
+      "url": "https://www.youtube.com/watch?v=uly4V0CgtEE",
+      "duration": 70,
+      "upload_date": "20251118",
+      "playlists": [
+        "Use Cases"
+      ],
+      "is_short": false
+    },
+    "16YcHHDIb-4": {
+      "title": "Building a Culture of Experimentation | NYC Experimentation Meetup",
+      "url": "https://www.youtube.com/watch?v=16YcHHDIb-4",
+      "duration": 2143,
+      "upload_date": "20251114",
+      "playlists": [
+        "Experimentation Meetup 2025"
+      ],
+      "is_short": false
+    },
+    "qM5_6z_lPoo": {
+      "title": "The Magic of Experimentation with Nate Jester | NYC Experimentation Meetup",
+      "url": "https://www.youtube.com/watch?v=qM5_6z_lPoo",
+      "duration": 1445,
+      "upload_date": "20251114",
+      "playlists": [
+        "Experimentation Meetup 2025"
+      ],
+      "is_short": false
+    },
+    "JTPNYm5nrxg": {
+      "title": "Liz Obermaier Breaks Down 10 Must-Run Experiments | NYC Experimentation Meetup",
+      "url": "https://www.youtube.com/watch?v=JTPNYm5nrxg",
+      "duration": 1477,
+      "upload_date": "20251114",
+      "playlists": [
+        "Experimentation Meetup 2025"
+      ],
+      "is_short": false
+    },
+    "Ca6n4Szjl0c": {
+      "title": "Advanced Experiment Analysis with Ben Weymiller and Tyler VanHaren | Webinar",
+      "url": "https://www.youtube.com/watch?v=Ca6n4Szjl0c",
+      "duration": 3222,
+      "upload_date": "20251113",
+      "playlists": [],
+      "is_short": false
+    },
+    "ouLuqDDRxDM": {
+      "title": "How Top Tech Teams Experiment | San Francisco Experimentation Meetup",
+      "url": "https://www.youtube.com/watch?v=ouLuqDDRxDM",
+      "duration": 1710,
+      "upload_date": "20251112",
+      "playlists": [
+        "Experimentation Meetup 2025"
+      ],
+      "is_short": false
+    },
+    "k3bBydwrC_k": {
+      "title": "10 Experiments to Run Before You Die with Liz Obermaier | San Francisco Experimentation Meetup",
+      "url": "https://www.youtube.com/watch?v=k3bBydwrC_k",
+      "duration": 1558,
+      "upload_date": "20251112",
+      "playlists": [
+        "Experimentation Meetup 2025"
+      ],
+      "is_short": false
+    },
+    "XgBceLEH5io": {
+      "title": "Nate Jester Opens the Statsig Experimentation Meetup | San Francisco",
+      "url": "https://www.youtube.com/watch?v=XgBceLEH5io",
+      "duration": 1356,
+      "upload_date": "20251112",
+      "playlists": [
+        "Experimentation Meetup 2025"
+      ],
+      "is_short": false
+    },
+    "isdX9QS0ZSo": {
+      "title": "Tactics for faster experimentation | Webinar",
+      "url": "https://www.youtube.com/watch?v=isdX9QS0ZSo",
+      "duration": 3548,
+      "upload_date": "20251029",
+      "playlists": [],
+      "is_short": false
+    },
+    "ZQDEqJN_yg4": {
+      "title": "Statsig MCP Server with Andre Terron | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=ZQDEqJN_yg4",
+      "duration": 1276,
+      "upload_date": "20251003",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "QAgd06EZxNs": {
+      "title": "Guardrails for Growth with Ekanth Sethuramalingam | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=QAgd06EZxNs",
+      "duration": 1642,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "DRiNlzNXtPA": {
+      "title": "10 Experiments to Run Before You Die with Liz Obermaier | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=DRiNlzNXtPA",
+      "duration": 1938,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "0Q7LbPwy9s4": {
+      "title": "Reshaping the Growth Playbook in the Age of AI with Sriram Sridharan | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=0Q7LbPwy9s4",
+      "duration": 1753,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "Il8tDIFXAXM": {
+      "title": "Inference Engineering for Hypergrowth with Philip Kiely | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=Il8tDIFXAXM",
+      "duration": 1660,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "xtUL_5TC3oM": {
+      "title": "Scaled Experimentation at Atlassian with Dylan Lewis | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=xtUL_5TC3oM",
+      "duration": 1865,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "2vsF-JRUsWo": {
+      "title": "The Offline to Online Evaluation Loop with Joe Zeng and Vineeth Madhusudanan | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=2vsF-JRUsWo",
+      "duration": 1790,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "uVlyqDxsqJE": {
+      "title": "The Great Debate: Build vs. Buy with Thu Le, Eric Weber and Kevin Washington | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=uVlyqDxsqJE",
+      "duration": 1849,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "zq-PeknaN8w": {
+      "title": "Scaling Data Teams from Zero to One with Tim Chan and Tim Qi | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=zq-PeknaN8w",
+      "duration": 1880,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "vPPk7_Sg8r0": {
+      "title": "Closing Keynote with Vijaye Raji and Venkat Venkataramani | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=vPPk7_Sg8r0",
+      "duration": 1848,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "SglVGiA1t5Y": {
+      "title": "Breaking, Building and Betting on AI Panel | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=SglVGiA1t5Y",
+      "duration": 2648,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "aPhgjTXLNco": {
+      "title": "Enterprise at the Speed of AI with Jay Parikh and Vijaye Raji | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=aPhgjTXLNco",
+      "duration": 1882,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "CwCfUkpfr_A": {
+      "title": "Data-Driven by Design with Yuhki Yamashita and Margaret-Ann Seger | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=CwCfUkpfr_A",
+      "duration": 1742,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "U8t2-H3jeys": {
+      "title": "Welcome Keynote with Vijaye Raji, Margaret-Ann Seger and Skye Scofield | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=U8t2-H3jeys",
+      "duration": 1176,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "T-Bi3Z2KmBA": {
+      "title": "The State of Startups and AI with Sarah Guo | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=T-Bi3Z2KmBA",
+      "duration": 1758,
+      "upload_date": "20251002",
+      "playlists": [
+        "Sigsum 2025"
+      ],
+      "is_short": false
+    },
+    "6Lx1QV3Q0_U": {
+      "title": "Geo Testing 101 | Webinar",
+      "url": "https://www.youtube.com/watch?v=6Lx1QV3Q0_U",
+      "duration": 3207,
+      "upload_date": "20250930",
+      "playlists": [],
+      "is_short": false
+    },
+    "KBIhJCDyiic": {
+      "title": "Experimentation in the AI World | Webinar",
+      "url": "https://www.youtube.com/watch?v=KBIhJCDyiic",
+      "duration": 3134,
+      "upload_date": "20250912",
+      "playlists": [],
+      "is_short": false
+    },
+    "xV_unF4rrzM": {
+      "title": "Demo: Statsig Experimentation and Analytics Platform in Microsoft Fabric",
+      "url": "https://www.youtube.com/watch?v=xV_unF4rrzM",
+      "duration": 186,
+      "upload_date": "20250912",
+      "playlists": [],
+      "is_short": false
+    },
+    "68a-CUVZW8c": {
+      "title": "Statsig Experimentation and Analytics Platform in Microsoft Fabric Announcement",
+      "url": "https://www.youtube.com/watch?v=68a-CUVZW8c",
+      "duration": 61,
+      "upload_date": "20250912",
+      "playlists": [],
+      "is_short": false
+    },
+    "Y_pQbBZ3-4A": {
+      "title": "Verified Cohorts & Dashboards | Launch Moment",
+      "url": "https://www.youtube.com/watch?v=Y_pQbBZ3-4A",
+      "duration": 108,
+      "upload_date": "20250827",
+      "playlists": [],
+      "is_short": false
+    },
+    "H38mRhBSO_Y": {
+      "title": "Sigsum 2025 | The Blueprint to Smarter Growth",
+      "url": "https://www.youtube.com/watch?v=H38mRhBSO_Y",
+      "duration": 21,
+      "upload_date": "20250813",
+      "playlists": [],
+      "is_short": false
+    },
+    "NshgLDpAatc": {
+      "title": "Vercel Log Drains | Launch Moment",
+      "url": "https://www.youtube.com/watch?v=NshgLDpAatc",
+      "duration": 124,
+      "upload_date": "20250812",
+      "playlists": [
+        "Launch Moments"
+      ],
+      "is_short": false
+    },
+    "NaI_5G97fqk": {
+      "title": "July 2025 Monthly Product Roundup",
+      "url": "https://www.youtube.com/watch?v=NaI_5G97fqk",
+      "duration": 119,
+      "upload_date": "20250809",
+      "playlists": [],
+      "is_short": false
+    },
+    "NxseYMdZN4c": {
+      "title": "Multivariate Dynamic Configs | Statsig",
+      "url": "https://www.youtube.com/watch?v=NxseYMdZN4c",
+      "duration": 105,
+      "upload_date": "20250808",
+      "playlists": [
+        "Launch Moments"
+      ],
+      "is_short": false
+    },
+    "SMA-f1nex5I": {
+      "title": "Product Growth Forum | Seattle Tech Week",
+      "url": "https://www.youtube.com/watch?v=SMA-f1nex5I",
+      "duration": 3525,
+      "upload_date": "20250807",
+      "playlists": [],
+      "is_short": false
+    },
+    "M5AzAkQw2xg": {
+      "title": "How to optimize your AI products",
+      "url": "https://www.youtube.com/watch?v=M5AzAkQw2xg",
+      "duration": 3349,
+      "upload_date": "20250807",
+      "playlists": [],
+      "is_short": false
+    },
+    "W6d7X89EMA0": {
+      "title": "The Startup Path after Big Tech | Seattle Tech Week",
+      "url": "https://www.youtube.com/watch?v=W6d7X89EMA0",
+      "duration": 3271,
+      "upload_date": "20250806",
+      "playlists": [],
+      "is_short": false
+    },
+    "TN5aXWPDnQ0": {
+      "title": "Offline Evaluations | Experimentation Week 2025 Day 5",
+      "url": "https://www.youtube.com/watch?v=TN5aXWPDnQ0",
+      "duration": 67,
+      "upload_date": "20250718",
+      "playlists": [],
+      "is_short": false
+    },
+    "xMbR2FlLnUQ": {
+      "title": "Experiment Exposure Analysis | Experimentation Week 2025 Day 4",
+      "url": "https://www.youtube.com/watch?v=xMbR2FlLnUQ",
+      "duration": 90,
+      "upload_date": "20250717",
+      "playlists": [
+        "Experimentation Week"
+      ],
+      "is_short": false
+    },
+    "TyU9K2Fziew": {
+      "title": "Grid Search | Experimentation Week 2025 Day 3",
+      "url": "https://www.youtube.com/watch?v=TyU9K2Fziew",
+      "duration": 79,
+      "upload_date": "20250716",
+      "playlists": [],
+      "is_short": false
+    },
+    "TaBVpC9iogw": {
+      "title": "Decision making in the age of AI | Webinar",
+      "url": "https://www.youtube.com/watch?v=TaBVpC9iogw",
+      "duration": 3549,
+      "upload_date": "20250716",
+      "playlists": [],
+      "is_short": false
+    },
+    "rpz2DoIF5-E": {
+      "title": "SPRT: Sequential Probability Ratio Test | Experimentation Week 2025 Day 2",
+      "url": "https://www.youtube.com/watch?v=rpz2DoIF5-E",
+      "duration": 119,
+      "upload_date": "20250715",
+      "playlists": [
+        "Experimentation Week"
+      ],
+      "is_short": false
+    },
+    "WlczLOqifY4": {
+      "title": "CURE | Experimentation Week 2025 Day 1",
+      "url": "https://www.youtube.com/watch?v=WlczLOqifY4",
+      "duration": 113,
+      "upload_date": "20250714",
+      "playlists": [
+        "Experimentation Week"
+      ],
+      "is_short": false
+    },
+    "KxP3ax7d9Vc": {
+      "title": "Product Leadership Fireside Chat",
+      "url": "https://www.youtube.com/watch?v=KxP3ax7d9Vc",
+      "duration": 3614,
+      "upload_date": "20250710",
+      "playlists": [],
+      "is_short": false
+    },
+    "K1yNxfUUS-o": {
+      "title": "Build an App with a Single Prompt | Platform",
+      "url": "https://www.youtube.com/watch?v=K1yNxfUUS-o",
+      "duration": 118,
+      "upload_date": "20250707",
+      "playlists": [
+        "Launch Moments"
+      ],
+      "is_short": false
+    },
+    "ikLXIdmZdjc": {
+      "title": "Introducing Topline Alerts | Analytics",
+      "url": "https://www.youtube.com/watch?v=ikLXIdmZdjc",
+      "duration": 69,
+      "upload_date": "20250704",
+      "playlists": [
+        "Launch Moments"
+      ],
+      "is_short": false
+    },
+    "mBwF5_gFOI4": {
+      "title": "Introducing Feature Gate Safeguards | Feature Management",
+      "url": "https://www.youtube.com/watch?v=mBwF5_gFOI4",
+      "duration": 85,
+      "upload_date": "20250703",
+      "playlists": [
+        "Launch Moments"
+      ],
+      "is_short": false
+    },
+    "xCFU2WI97zc": {
+      "title": "Vercel Ship 2025",
+      "url": "https://www.youtube.com/watch?v=xCFU2WI97zc",
+      "duration": 22,
+      "upload_date": "20250626",
+      "playlists": [],
+      "is_short": false
+    },
+    "I-3fbm84_cs": {
+      "title": "How OfferUp Runs 10x More Experiments | Statsig Customer Story",
+      "url": "https://www.youtube.com/watch?v=I-3fbm84_cs",
+      "duration": 386,
+      "upload_date": "20250624",
+      "playlists": [],
+      "is_short": false
+    },
+    "ozNhsp16Imc": {
+      "title": "Introducing Fieller Intervals",
+      "url": "https://www.youtube.com/watch?v=ozNhsp16Imc",
+      "duration": 96,
+      "upload_date": "20250616",
+      "playlists": [],
+      "is_short": false
+    },
+    "gQwdkt3Dppk": {
+      "title": "Announcing the Statsig MCP Server",
+      "url": "https://www.youtube.com/watch?v=gQwdkt3Dppk",
+      "duration": 179,
+      "upload_date": "20250606",
+      "playlists": [],
+      "is_short": false
+    },
+    "R-8w4jqZwV4": {
+      "title": "Webinar: Scaling from 5 to 5000 Experiments",
+      "url": "https://www.youtube.com/watch?v=R-8w4jqZwV4",
+      "duration": 3766,
+      "upload_date": "20250605",
+      "playlists": [],
+      "is_short": false
+    },
+    "4rW70ttElAg": {
+      "title": "Berlin Experimentation Meetup 2025",
+      "url": "https://www.youtube.com/watch?v=4rW70ttElAg",
+      "duration": 1539,
+      "upload_date": "20250603",
+      "playlists": [],
+      "is_short": false
+    },
+    "7Z5tQExNYE4": {
+      "title": "Unlocking A/B Testing for B2B",
+      "url": "https://www.youtube.com/watch?v=7Z5tQExNYE4",
+      "duration": 2662,
+      "upload_date": "20250523",
+      "playlists": [
+        "Events On-Demand"
+      ],
+      "is_short": false
+    },
+    "h6xwDd11P9M": {
+      "title": "Growth Engineering in the age of AI",
+      "url": "https://www.youtube.com/watch?v=h6xwDd11P9M",
+      "duration": 3225,
+      "upload_date": "20250520",
+      "playlists": [],
+      "is_short": false
+    },
+    "Xz3CuMZFgIc": {
+      "title": "Significance Summit - The future of engineering tools",
+      "url": "https://www.youtube.com/watch?v=Xz3CuMZFgIc",
+      "duration": 3280,
+      "upload_date": "20250429",
+      "playlists": [
+        "Significance Summit On-demand"
+      ],
+      "is_short": false
+    },
+    "yV8xxhWo_6E": {
+      "title": "Seattle Startup Summit",
+      "url": "https://www.youtube.com/watch?v=yV8xxhWo_6E",
+      "duration": 1232,
+      "upload_date": "20250331",
+      "playlists": [
+        "Events On-Demand"
+      ],
+      "is_short": false
+    },
+    "jM9DZhLXGNs": {
+      "title": "Statsig x Vercel Integration: Get set up with Experiments",
+      "url": "https://www.youtube.com/watch?v=jM9DZhLXGNs",
+      "duration": 153,
+      "upload_date": "20250319",
+      "playlists": [],
+      "is_short": false
+    },
+    "xGlDtB3mr9s": {
+      "title": "Statsig x Vercel Integration: Get set up with Feature Flags",
+      "url": "https://www.youtube.com/watch?v=xGlDtB3mr9s",
+      "duration": 154,
+      "upload_date": "20250319",
+      "playlists": [],
+      "is_short": false
+    },
+    "ZtShzLmAnaE": {
+      "title": "Sweet Test O' Mine: Rocking the Truth in Experimentation",
+      "url": "https://www.youtube.com/watch?v=ZtShzLmAnaE",
+      "duration": 3201,
+      "upload_date": "20250318",
+      "playlists": [],
+      "is_short": false
+    },
+    "TFFdmwpKIOA": {
+      "title": "Statsig x Vercel Integration: Get set up with Session Replay",
+      "url": "https://www.youtube.com/watch?v=TFFdmwpKIOA",
+      "duration": 88,
+      "upload_date": "20250313",
+      "playlists": [],
+      "is_short": false
+    },
+    "utOjf0KpYJQ": {
+      "title": "Statsig x Vercel Integration: Get Set up with Analytics",
+      "url": "https://www.youtube.com/watch?v=utOjf0KpYJQ",
+      "duration": 141,
+      "upload_date": "20250313",
+      "playlists": [],
+      "is_short": false
+    },
+    "eQz8GJ1Ye1E": {
+      "title": "Get Set Up with the Statsig x Vercel Integration",
+      "url": "https://www.youtube.com/watch?v=eQz8GJ1Ye1E",
+      "duration": 89,
+      "upload_date": "20250311",
+      "playlists": [],
+      "is_short": false
+    },
+    "IiydLFT2ZHE": {
+      "title": "Fireside Chat: Scaling Experimentation at HelloFresh",
+      "url": "https://www.youtube.com/watch?v=IiydLFT2ZHE",
+      "duration": 493,
+      "upload_date": "20250225",
+      "playlists": [],
+      "is_short": false
+    },
+    "Jl8J_z9wdUY": {
+      "title": "Customer Panel: Building a Data-driven Culture",
+      "url": "https://www.youtube.com/watch?v=Jl8J_z9wdUY",
+      "duration": 1925,
+      "upload_date": "20250224",
+      "playlists": [],
+      "is_short": false
+    },
+    "FDdw86XWzVk": {
+      "title": "Dude, Where's My Impact? A guide to reporting A/B tests",
+      "url": "https://www.youtube.com/watch?v=FDdw86XWzVk",
+      "duration": 3069,
+      "upload_date": "20250131",
+      "playlists": [],
+      "is_short": false
+    },
+    "9XR-gVI2g1I": {
+      "title": "Deep Dive 101: Feature Flag and Experiment Testing and Diagnostics",
+      "url": "https://www.youtube.com/watch?v=9XR-gVI2g1I",
+      "duration": 436,
+      "upload_date": "20250122",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "rkjq5eCOY9w": {
+      "title": "Deep Dive 101: SDK logging events and exposures",
+      "url": "https://www.youtube.com/watch?v=rkjq5eCOY9w",
+      "duration": 288,
+      "upload_date": "20250122",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "r4-4Hed_1Sk": {
+      "title": "Deep Dive 101: SDK Server-Side Concepts and Differences",
+      "url": "https://www.youtube.com/watch?v=r4-4Hed_1Sk",
+      "duration": 515,
+      "upload_date": "20250122",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "1VPb5QNDjhY": {
+      "title": "Statsig sidecar demo",
+      "url": "https://www.youtube.com/watch?v=1VPb5QNDjhY",
+      "duration": 248,
+      "upload_date": "20250121",
+      "playlists": [],
+      "is_short": false
+    },
+    "_mZVuBzgtEE": {
+      "title": "Deep Dive 101: SDK User Object and Targeting",
+      "url": "https://www.youtube.com/watch?v=_mZVuBzgtEE",
+      "duration": 582,
+      "upload_date": "20250117",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "QDPu7EvaLf0": {
+      "title": "Deep Dive 101: SDK Basics, Install and Initialize",
+      "url": "https://www.youtube.com/watch?v=QDPu7EvaLf0",
+      "duration": 394,
+      "upload_date": "20250117",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "5U_qICP4Y1Y": {
+      "title": "Feature Flags Deep Dive",
+      "url": "https://www.youtube.com/watch?v=5U_qICP4Y1Y",
+      "duration": 574,
+      "upload_date": "20241220",
+      "playlists": [],
+      "is_short": false
+    },
+    "ncmhK6YVWHA": {
+      "title": "Product Analytics Overview",
+      "url": "https://www.youtube.com/watch?v=ncmhK6YVWHA",
+      "duration": 170,
+      "upload_date": "20241220",
+      "playlists": [],
+      "is_short": false
+    },
+    "WrPCtDCvr98": {
+      "title": "See the whole picture: Add product analytics to feature gates & experiments",
+      "url": "https://www.youtube.com/watch?v=WrPCtDCvr98",
+      "duration": 2720,
+      "upload_date": "20241211",
+      "playlists": [],
+      "is_short": false
+    },
+    "eELLmqM4v7U": {
+      "title": "Building AI applications at scale with the Statsig x Azure AI integration",
+      "url": "https://www.youtube.com/watch?v=eELLmqM4v7U",
+      "duration": 2728,
+      "upload_date": "20241204",
+      "playlists": [],
+      "is_short": false
+    },
+    "w0pqtzR64qY": {
+      "title": "Product Overview Video",
+      "url": "https://www.youtube.com/watch?v=w0pqtzR64qY",
+      "duration": 472,
+      "upload_date": "20241204",
+      "playlists": [],
+      "is_short": false
+    },
+    "3Q-qyfX8UCE": {
+      "title": "A/B Talks: NYC",
+      "url": "https://www.youtube.com/watch?v=3Q-qyfX8UCE",
+      "duration": 3370,
+      "upload_date": "20241119",
+      "playlists": [
+        "Events On-Demand"
+      ],
+      "is_short": false
+    },
+    "sRaMWHHiW6g": {
+      "title": "Statsig Experimentation Overview",
+      "url": "https://www.youtube.com/watch?v=sRaMWHHiW6g",
+      "duration": 194,
+      "upload_date": "20241119",
+      "playlists": [],
+      "is_short": false
+    },
+    "SiooU6fWYww": {
+      "title": "Statsig Feature Flags Overview",
+      "url": "https://www.youtube.com/watch?v=SiooU6fWYww",
+      "duration": 136,
+      "upload_date": "20241119",
+      "playlists": [],
+      "is_short": false
+    },
+    "23mt8o8Hz74": {
+      "title": "Test and the City: Navigating Sequential Testing",
+      "url": "https://www.youtube.com/watch?v=23mt8o8Hz74",
+      "duration": 2838,
+      "upload_date": "20241107",
+      "playlists": [],
+      "is_short": false
+    },
+    "v6bjF51OniI": {
+      "title": "Statsig x LeadDev Webinar: How to grow and scale your feature management process",
+      "url": "https://www.youtube.com/watch?v=v6bjF51OniI",
+      "duration": 2687,
+      "upload_date": "20241022",
+      "playlists": [],
+      "is_short": false
+    },
+    "O64tWHT8mhI": {
+      "title": "Significance Summit Highlight",
+      "url": "https://www.youtube.com/watch?v=O64tWHT8mhI",
+      "duration": 55,
+      "upload_date": "20241018",
+      "playlists": [],
+      "is_short": false
+    },
+    "nLyZ7e4VqKA": {
+      "title": "Data Scientists\u2019 job is more interesting with A/B testing platforms",
+      "url": "https://www.youtube.com/watch?v=nLyZ7e4VqKA",
+      "duration": 2894,
+      "upload_date": "20241016",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "-_zevBkyPBo": {
+      "title": "Acquired Minisodes: A conversation with Mike Vernal",
+      "url": "https://www.youtube.com/watch?v=-_zevBkyPBo",
+      "duration": 822,
+      "upload_date": "20241015",
+      "playlists": [
+        "Acquired Minisodes: powered by Statsig"
+      ],
+      "is_short": false
+    },
+    "_P6Ujsqz49A": {
+      "title": "Acquired Minisode: A conversation with Tamar Yeshoshua",
+      "url": "https://www.youtube.com/watch?v=_P6Ujsqz49A",
+      "duration": 852,
+      "upload_date": "20241015",
+      "playlists": [
+        "Acquired Minisodes: powered by Statsig"
+      ],
+      "is_short": false
+    },
+    "p03mo040vAk": {
+      "title": "Acquired Minisodes: A conversation with Guillermo Rauch",
+      "url": "https://www.youtube.com/watch?v=p03mo040vAk",
+      "duration": 990,
+      "upload_date": "20241015",
+      "playlists": [
+        "Acquired Minisodes: powered by Statsig"
+      ],
+      "is_short": false
+    },
+    "3zB6Juog7gk": {
+      "title": "Acquired Minisodes: A conversation with Ronny Kohavi",
+      "url": "https://www.youtube.com/watch?v=3zB6Juog7gk",
+      "duration": 859,
+      "upload_date": "20241015",
+      "playlists": [
+        "Acquired Minisodes: powered by Statsig"
+      ],
+      "is_short": false
+    },
+    "TOseJPWiZpU": {
+      "title": "Acquired Minisodes: A conversation with Vijaye Raji",
+      "url": "https://www.youtube.com/watch?v=TOseJPWiZpU",
+      "duration": 1094,
+      "upload_date": "20241015",
+      "playlists": [
+        "Acquired Minisodes: powered by Statsig"
+      ],
+      "is_short": false
+    },
+    "h-j_7ItiwFw": {
+      "title": "Acquired Minisode: A conversation with Karri Saarinen",
+      "url": "https://www.youtube.com/watch?v=h-j_7ItiwFw",
+      "duration": 1033,
+      "upload_date": "20241015",
+      "playlists": [
+        "Acquired Minisodes: powered by Statsig"
+      ],
+      "is_short": false
+    },
+    "CVBD2ZWNFxI": {
+      "title": "Acquired Minisode: A conversation with Fidji Simo",
+      "url": "https://www.youtube.com/watch?v=CVBD2ZWNFxI",
+      "duration": 767,
+      "upload_date": "20241015",
+      "playlists": [
+        "Acquired Minisodes: powered by Statsig"
+      ],
+      "is_short": false
+    },
+    "mtusGrYIce8": {
+      "title": "Acquired Minisode: A conversation with Mike Develin",
+      "url": "https://www.youtube.com/watch?v=mtusGrYIce8",
+      "duration": 444,
+      "upload_date": "20241015",
+      "playlists": [
+        "Acquired Minisodes: powered by Statsig"
+      ],
+      "is_short": false
+    },
+    "IrNXdZakV-8": {
+      "title": "Significance Summit - Fireside chat with Mike Vernal and Tamar Yehoshua",
+      "url": "https://www.youtube.com/watch?v=IrNXdZakV-8",
+      "duration": 1711,
+      "upload_date": "20241011",
+      "playlists": [
+        "Significance Summit On-demand"
+      ],
+      "is_short": false
+    },
+    "fekEZTdpGbg": {
+      "title": "Significance Summit - Welcome with Vijaye Raji",
+      "url": "https://www.youtube.com/watch?v=fekEZTdpGbg",
+      "duration": 1148,
+      "upload_date": "20241007",
+      "playlists": [
+        "Significance Summit On-demand"
+      ],
+      "is_short": false
+    },
+    "Rr5VJbHgYtQ": {
+      "title": "Significance Summit - The Acquired interview",
+      "url": "https://www.youtube.com/watch?v=Rr5VJbHgYtQ",
+      "duration": 1752,
+      "upload_date": "20241007",
+      "playlists": [
+        "Significance Summit On-demand"
+      ],
+      "is_short": false
+    },
+    "ZCCBem_qnbs": {
+      "title": "Significance Summit - Building the best data team with Mike Develin",
+      "url": "https://www.youtube.com/watch?v=ZCCBem_qnbs",
+      "duration": 1892,
+      "upload_date": "20241007",
+      "playlists": [
+        "Significance Summit On-demand"
+      ],
+      "is_short": false
+    },
+    "FYrYeYwF3q8": {
+      "title": "Significance Summit - The cultural evolution towards data-driven decision making with Ronny Kohavi",
+      "url": "https://www.youtube.com/watch?v=FYrYeYwF3q8",
+      "duration": 1489,
+      "upload_date": "20241007",
+      "playlists": [
+        "Significance Summit On-demand"
+      ],
+      "is_short": false
+    },
+    "qBnC6sOzBXo": {
+      "title": "Significance Summit - Fireside chat with Fidji Simo",
+      "url": "https://www.youtube.com/watch?v=qBnC6sOzBXo",
+      "duration": 1858,
+      "upload_date": "20241007",
+      "playlists": [
+        "Significance Summit On-demand"
+      ],
+      "is_short": false
+    },
+    "NuZ32jocMkg": {
+      "title": "El Top Secret de las empresas m\u00e1s exitosas en LatAm: La Experimentaci\u00f3n de Productos",
+      "url": "https://www.youtube.com/watch?v=NuZ32jocMkg",
+      "duration": 3829,
+      "upload_date": "20241004",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "ApVHY8xPpAQ": {
+      "title": "I want it that way: Building experimentation infrastructure & culture with Ronny Kohavi",
+      "url": "https://www.youtube.com/watch?v=ApVHY8xPpAQ",
+      "duration": 3465,
+      "upload_date": "20240912",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "vD0TdpZs-6o": {
+      "title": "Why do analytics teams fail, and what you can do about it",
+      "url": "https://www.youtube.com/watch?v=vD0TdpZs-6o",
+      "duration": 2755,
+      "upload_date": "20240822",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "7MCukkZ6uUw": {
+      "title": "A/B Talks: Seattle",
+      "url": "https://www.youtube.com/watch?v=7MCukkZ6uUw",
+      "duration": 3525,
+      "upload_date": "20240802",
+      "playlists": [
+        "Events On-Demand"
+      ],
+      "is_short": false
+    },
+    "Mn9BVeK2hTE": {
+      "title": "Oops I did it again: Common testing mistakes and how to fix them",
+      "url": "https://www.youtube.com/watch?v=Mn9BVeK2hTE",
+      "duration": 3118,
+      "upload_date": "20240717",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "V3JIetcX59U": {
+      "title": "Concepts: Experiment Reviews",
+      "url": "https://www.youtube.com/watch?v=V3JIetcX59U",
+      "duration": 950,
+      "upload_date": "20240627",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "oRkrHyttsIE": {
+      "title": "Concepts: Basic Pulse Results",
+      "url": "https://www.youtube.com/watch?v=oRkrHyttsIE",
+      "duration": 720,
+      "upload_date": "20240627",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "G5sUSmxEwDQ": {
+      "title": "A/B Talks: Berlin",
+      "url": "https://www.youtube.com/watch?v=G5sUSmxEwDQ",
+      "duration": 829,
+      "upload_date": "20240624",
+      "playlists": [
+        "Events On-Demand"
+      ],
+      "is_short": false
+    },
+    "z3xNmwCuIhI": {
+      "title": "A/B Talks: London",
+      "url": "https://www.youtube.com/watch?v=z3xNmwCuIhI",
+      "duration": 3611,
+      "upload_date": "20240620",
+      "playlists": [],
+      "is_short": false
+    },
+    "WElxHXRThyo": {
+      "title": "Beyond Simple A/B Testing: Advanced Experimentation Tactics",
+      "url": "https://www.youtube.com/watch?v=WElxHXRThyo",
+      "duration": 3560,
+      "upload_date": "20240612",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "pjqMhWgujdg": {
+      "title": "Announcing Session Replays by Statsig",
+      "url": "https://www.youtube.com/watch?v=pjqMhWgujdg",
+      "duration": 109,
+      "upload_date": "20240517",
+      "playlists": [],
+      "is_short": false
+    },
+    "87JdBEvRrEU": {
+      "title": "Concepts: Holdouts",
+      "url": "https://www.youtube.com/watch?v=87JdBEvRrEU",
+      "duration": 690,
+      "upload_date": "20240516",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "uVdTiyf0aPQ": {
+      "title": "Concepts: Test an Experiment",
+      "url": "https://www.youtube.com/watch?v=uVdTiyf0aPQ",
+      "duration": 364,
+      "upload_date": "20240516",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "uYSDfNgAOYI": {
+      "title": "Fireside Chat with Kevin Anderson, PM (Experimentation) at Vista",
+      "url": "https://www.youtube.com/watch?v=uYSDfNgAOYI",
+      "duration": 2872,
+      "upload_date": "20240516",
+      "playlists": [],
+      "is_short": false
+    },
+    "bvY20-7Hq5M": {
+      "title": "Concepts: Diagnostics",
+      "url": "https://www.youtube.com/watch?v=bvY20-7Hq5M",
+      "duration": 482,
+      "upload_date": "20240516",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "XaKtPxNOAAg": {
+      "title": "Concepts: Experiment Setup",
+      "url": "https://www.youtube.com/watch?v=XaKtPxNOAAg",
+      "duration": 650,
+      "upload_date": "20240516",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "6oQwFJjzHII": {
+      "title": "Product Analytics 101: Enabling data-driven product growth",
+      "url": "https://www.youtube.com/watch?v=6oQwFJjzHII",
+      "duration": 2817,
+      "upload_date": "20240417",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "doeDTwz6OFk": {
+      "title": "Scalable Experimentation 101",
+      "url": "https://www.youtube.com/watch?v=doeDTwz6OFk",
+      "duration": 3701,
+      "upload_date": "20240412",
+      "playlists": [],
+      "is_short": false
+    },
+    "v_gy1NxRd8s": {
+      "title": "Announcing Statsig's Product Analytics",
+      "url": "https://www.youtube.com/watch?v=v_gy1NxRd8s",
+      "duration": 30,
+      "upload_date": "20240319",
+      "playlists": [],
+      "is_short": false
+    },
+    "VH-hfEBFPHU": {
+      "title": "How to build an experimentation culture for data-driven product development",
+      "url": "https://www.youtube.com/watch?v=VH-hfEBFPHU",
+      "duration": 3421,
+      "upload_date": "20240315",
+      "playlists": [],
+      "is_short": false
+    },
+    "UWjfJGmAe0A": {
+      "title": "Introduction to Statsig: PM Onboarding",
+      "url": "https://www.youtube.com/watch?v=UWjfJGmAe0A",
+      "duration": 1393,
+      "upload_date": "20240306",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "wo_Sbr-ZRC4": {
+      "title": "Unlocking Agility with Warehouse Native Experimentation",
+      "url": "https://www.youtube.com/watch?v=wo_Sbr-ZRC4",
+      "duration": 2386,
+      "upload_date": "20240306",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "E53OakaKrtg": {
+      "title": "Statsig WHN How-to 2: Metrics",
+      "url": "https://www.youtube.com/watch?v=E53OakaKrtg",
+      "duration": 167,
+      "upload_date": "20240228",
+      "playlists": [
+        "Statsig Warehouse Native How-tos"
+      ],
+      "is_short": false
+    },
+    "Xct4L5Z3jGI": {
+      "title": "Statsig WHN How-to 1: Set up",
+      "url": "https://www.youtube.com/watch?v=Xct4L5Z3jGI",
+      "duration": 287,
+      "upload_date": "20240228",
+      "playlists": [
+        "Statsig Warehouse Native How-tos"
+      ],
+      "is_short": false
+    },
+    "JrTDwk4OIPA": {
+      "title": "Fireside Chat with Dylan Lewis, Experimentation Leader, Atlassian",
+      "url": "https://www.youtube.com/watch?v=JrTDwk4OIPA",
+      "duration": 2915,
+      "upload_date": "20240202",
+      "playlists": [],
+      "is_short": false
+    },
+    "yMO9OLZIdkY": {
+      "title": "Introduction to Statsig: Engineering Onboarding",
+      "url": "https://www.youtube.com/watch?v=yMO9OLZIdkY",
+      "duration": 1641,
+      "upload_date": "20240118",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "IYfz-cZHyO4": {
+      "title": "Introduction to Statsig: General Onboarding",
+      "url": "https://www.youtube.com/watch?v=IYfz-cZHyO4",
+      "duration": 1256,
+      "upload_date": "20231214",
+      "playlists": [
+        "Statsig Onboarding Training Videos"
+      ],
+      "is_short": false
+    },
+    "tj6URim7WVg": {
+      "title": "Fireside Chat with Joel Witten, Head of Data, Rec Room",
+      "url": "https://www.youtube.com/watch?v=tj6URim7WVg",
+      "duration": 2801,
+      "upload_date": "20231117",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "85e7XhZnCkA": {
+      "title": "Lessons learnt from real-world PLG experiments",
+      "url": "https://www.youtube.com/watch?v=85e7XhZnCkA",
+      "duration": 2851,
+      "upload_date": "20231025",
+      "playlists": [],
+      "is_short": false
+    },
+    "UKxDxMx5WTI": {
+      "title": "How to make the case for experimentation in your organization",
+      "url": "https://www.youtube.com/watch?v=UKxDxMx5WTI",
+      "duration": 1747,
+      "upload_date": "20231016",
+      "playlists": [],
+      "is_short": false
+    },
+    "ZPXDIQqbB3w": {
+      "title": "Using metrics and analytics to supercharge your experimentation",
+      "url": "https://www.youtube.com/watch?v=ZPXDIQqbB3w",
+      "duration": 1764,
+      "upload_date": "20230929",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "o-IdGvufQ-Q": {
+      "title": "Women in Product - Seattle Chapter Presents: The Path to CPO and Beyond",
+      "url": "https://www.youtube.com/watch?v=o-IdGvufQ-Q",
+      "duration": 3511,
+      "upload_date": "20230925",
+      "playlists": [
+        "Events On-Demand"
+      ],
+      "is_short": false
+    },
+    "VrJ6f6A8-vI": {
+      "title": "Statsig Discussions",
+      "url": "https://www.youtube.com/watch?v=VrJ6f6A8-vI",
+      "duration": 121,
+      "upload_date": "20230907",
+      "playlists": [],
+      "is_short": false
+    },
+    "9MhcSSmWlXA": {
+      "title": "Power Analysis Calculator",
+      "url": "https://www.youtube.com/watch?v=9MhcSSmWlXA",
+      "duration": 92,
+      "upload_date": "20230829",
+      "playlists": [
+        "Statsig Product Walkthroughs"
+      ],
+      "is_short": false
+    },
+    "gxJ81Z2y5Ng": {
+      "title": "Introducing Statsig Analytics",
+      "url": "https://www.youtube.com/watch?v=gxJ81Z2y5Ng",
+      "duration": 123,
+      "upload_date": "20230828",
+      "playlists": [],
+      "is_short": false
+    },
+    "vTfYU8JQkf0": {
+      "title": "Experimentation Virtual Meetup: AMA with Ronny Kohavi",
+      "url": "https://www.youtube.com/watch?v=vTfYU8JQkf0",
+      "duration": 2977,
+      "upload_date": "20230823",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "ZGw-riBFz5w": {
+      "title": "Product Growth Forum",
+      "url": "https://www.youtube.com/watch?v=ZGw-riBFz5w",
+      "duration": 4085,
+      "upload_date": "20230815",
+      "playlists": [
+        "Events On-Demand"
+      ],
+      "is_short": false
+    },
+    "0fSWrlD0In8": {
+      "title": "Virtual Meetup - Using experimentation to tackle your big product goals in 2023",
+      "url": "https://www.youtube.com/watch?v=0fSWrlD0In8",
+      "duration": 2227,
+      "upload_date": "20230801",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "eL-j6SWBEog": {
+      "title": "Modern Feature Flags: From stress-free releases to automated experimentation",
+      "url": "https://www.youtube.com/watch?v=eL-j6SWBEog",
+      "duration": 1840,
+      "upload_date": "20230801",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "CJhGPbZSQgE": {
+      "title": "Learning Lab: Leveraging feature flags to enrich your Machine Learning model",
+      "url": "https://www.youtube.com/watch?v=CJhGPbZSQgE",
+      "duration": 1882,
+      "upload_date": "20230801",
+      "playlists": [
+        "Learning Labs"
+      ],
+      "is_short": false
+    },
+    "LzMiAXDkLwY": {
+      "title": "AI Experimentation: How to optimize the performance of AI-powered features using Statsig",
+      "url": "https://www.youtube.com/watch?v=LzMiAXDkLwY",
+      "duration": 1992,
+      "upload_date": "20230801",
+      "playlists": [
+        "Learning Labs"
+      ],
+      "is_short": false
+    },
+    "pZe8udLhZkA": {
+      "title": "AI Virtual Meetup:",
+      "url": "https://www.youtube.com/watch?v=pZe8udLhZkA",
+      "duration": 1301,
+      "upload_date": "20230801",
+      "playlists": [
+        "Learning Labs"
+      ],
+      "is_short": false
+    },
+    "fIOvWX8NxA0": {
+      "title": "Dynamic Configs",
+      "url": "https://www.youtube.com/watch?v=fIOvWX8NxA0",
+      "duration": 101,
+      "upload_date": "20230729",
+      "playlists": [],
+      "is_short": false
+    },
+    "Q-J9taUFEZg": {
+      "title": "Statsig + @DatadogHQ Integration Overview",
+      "url": "https://www.youtube.com/watch?v=Q-J9taUFEZg",
+      "duration": 256,
+      "upload_date": "20230721",
+      "playlists": [],
+      "is_short": false
+    },
+    "pksZ8Uux_Lk": {
+      "title": "Experimentation Best Practices",
+      "url": "https://www.youtube.com/watch?v=pksZ8Uux_Lk",
+      "duration": 121,
+      "upload_date": "20230718",
+      "playlists": [
+        "Statsig Product Walkthroughs"
+      ],
+      "is_short": false
+    },
+    "zEej8rTPNPA": {
+      "title": "Statsig Product Overview",
+      "url": "https://www.youtube.com/watch?v=zEej8rTPNPA",
+      "duration": 283,
+      "upload_date": "20230707",
+      "playlists": [
+        "Statsig Product Walkthroughs"
+      ],
+      "is_short": false
+    },
+    "yblOuMeqThM": {
+      "title": "Statsig Feature Gates Overview",
+      "url": "https://www.youtube.com/watch?v=yblOuMeqThM",
+      "duration": 118,
+      "upload_date": "20230704",
+      "playlists": [
+        "Statsig Product Walkthroughs"
+      ],
+      "is_short": false
+    },
+    "clWLTXgving": {
+      "title": "Statsig Warehouse Native Product Walkthrough",
+      "url": "https://www.youtube.com/watch?v=clWLTXgving",
+      "duration": 204,
+      "upload_date": "20230625",
+      "playlists": [
+        "Statsig Product Walkthroughs"
+      ],
+      "is_short": false
+    },
+    "tjK_gUr6Luc": {
+      "title": "Statsig Warehouse Native",
+      "url": "https://www.youtube.com/watch?v=tjK_gUr6Luc",
+      "duration": 133,
+      "upload_date": "20230614",
+      "playlists": [
+        "Statsig Product Walkthroughs"
+      ],
+      "is_short": false
+    },
+    "-8FEpojD_tQ": {
+      "title": "Statsig - a culture change agent",
+      "url": "https://www.youtube.com/watch?v=-8FEpojD_tQ",
+      "duration": 44,
+      "upload_date": "20230613",
+      "playlists": [],
+      "is_short": false
+    },
+    "IcfSvycpacc": {
+      "title": "User Research and Analytics",
+      "url": "https://www.youtube.com/watch?v=IcfSvycpacc",
+      "duration": 112,
+      "upload_date": "20230207",
+      "playlists": [],
+      "is_short": false
+    },
+    "GOIz1viIVVM": {
+      "title": "Overlapping Experiments",
+      "url": "https://www.youtube.com/watch?v=GOIz1viIVVM",
+      "duration": 157,
+      "upload_date": "20230207",
+      "playlists": [],
+      "is_short": false
+    },
+    "G5YnmPEM4SA": {
+      "title": "Measuring Causality",
+      "url": "https://www.youtube.com/watch?v=G5YnmPEM4SA",
+      "duration": 64,
+      "upload_date": "20230207",
+      "playlists": [],
+      "is_short": false
+    },
+    "e0KMxhKi6uk": {
+      "title": "Balancing Data and Vision",
+      "url": "https://www.youtube.com/watch?v=e0KMxhKi6uk",
+      "duration": 91,
+      "upload_date": "20230207",
+      "playlists": [],
+      "is_short": false
+    },
+    "tIF9MS0UDFY": {
+      "title": "Intro to Statsig",
+      "url": "https://www.youtube.com/watch?v=tIF9MS0UDFY",
+      "duration": 201,
+      "upload_date": "20230106",
+      "playlists": [
+        "Statsig Product Walkthroughs"
+      ],
+      "is_short": false
+    },
+    "dPxRe4L8gBg": {
+      "title": "Experiment Setup in Statsig",
+      "url": "https://www.youtube.com/watch?v=dPxRe4L8gBg",
+      "duration": 300,
+      "upload_date": "20221010",
+      "playlists": [
+        "Statsig Product Walkthroughs"
+      ],
+      "is_short": false
+    },
+    "FNTz2G0fmY0": {
+      "title": "Statsig Advantage",
+      "url": "https://www.youtube.com/watch?v=FNTz2G0fmY0",
+      "duration": 333,
+      "upload_date": "20220823",
+      "playlists": [],
+      "is_short": false
+    },
+    "DeIn8Ze309k": {
+      "title": "Metric Selection for Better Experimentation",
+      "url": "https://www.youtube.com/watch?v=DeIn8Ze309k",
+      "duration": 282,
+      "upload_date": "20220602",
+      "playlists": [],
+      "is_short": false
+    },
+    "BrqQ4IX3eLc": {
+      "title": "Using Custom IDs on Statsig for Running Experiments",
+      "url": "https://www.youtube.com/watch?v=BrqQ4IX3eLc",
+      "duration": 77,
+      "upload_date": "20220425",
+      "playlists": [
+        "Tech Talks"
+      ],
+      "is_short": false
+    },
+    "qAUfqGf8dQY": {
+      "title": "Shallow vs. Business Metrics",
+      "url": "https://www.youtube.com/watch?v=qAUfqGf8dQY",
+      "duration": 140,
+      "upload_date": "20220422",
+      "playlists": [
+        "Tech Talks"
+      ],
+      "is_short": false
+    },
+    "k0mOX8Vy57A": {
+      "title": "How to do User Targeting with Feature Gates on Statsig",
+      "url": "https://www.youtube.com/watch?v=k0mOX8Vy57A",
+      "duration": 431,
+      "upload_date": "20220422",
+      "playlists": [
+        "Tutorials"
+      ],
+      "is_short": false
+    },
+    "NuvnQxaSYKU": {
+      "title": "Product Iteration with Experimentation - by Vineeth, Product Manager at Statsig",
+      "url": "https://www.youtube.com/watch?v=NuvnQxaSYKU",
+      "duration": 214,
+      "upload_date": "20220414",
+      "playlists": [
+        "Tech Talks"
+      ],
+      "is_short": false
+    },
+    "u_OLBnsrx0A": {
+      "title": "Set up your first A/B Test with Feature Gate",
+      "url": "https://www.youtube.com/watch?v=u_OLBnsrx0A",
+      "duration": 207,
+      "upload_date": "20220408",
+      "playlists": [
+        "Tutorials"
+      ],
+      "is_short": false
+    },
+    "GwZ7UqG8deI": {
+      "title": "Testing features that are expected wins, presented by Statsig",
+      "url": "https://www.youtube.com/watch?v=GwZ7UqG8deI",
+      "duration": 151,
+      "upload_date": "20220407",
+      "playlists": [
+        "Customer Success Stories"
+      ],
+      "is_short": false
+    },
+    "PNZRzCuA_zQ": {
+      "title": "Create your first feature gate with Statsig",
+      "url": "https://www.youtube.com/watch?v=PNZRzCuA_zQ",
+      "duration": 293,
+      "upload_date": "20220329",
+      "playlists": [
+        "Tutorials"
+      ],
+      "is_short": false
+    },
+    "EW4XmQIyEKI": {
+      "title": "Statsig Experiments: Creation & Interpreting Results",
+      "url": "https://www.youtube.com/watch?v=EW4XmQIyEKI",
+      "duration": 680,
+      "upload_date": "20211206",
+      "playlists": [
+        "Tutorials"
+      ],
+      "is_short": false
+    },
+    "m8MBzUDhLpg": {
+      "title": "What is a Feature Gate (Flag)?",
+      "url": "https://www.youtube.com/watch?v=m8MBzUDhLpg",
+      "duration": 97,
+      "upload_date": "20211116",
+      "playlists": [
+        "Statsig for Dummies"
+      ],
+      "is_short": false
+    },
+    "7Kd1nVBpW70": {
+      "title": "Running an A/B Test",
+      "url": "https://www.youtube.com/watch?v=7Kd1nVBpW70",
+      "duration": 133,
+      "upload_date": "20211116",
+      "playlists": [
+        "Statsig for Dummies"
+      ],
+      "is_short": false
+    },
+    "jiDIgcSlUyk": {
+      "title": "Statsig Client and Server SDKs",
+      "url": "https://www.youtube.com/watch?v=jiDIgcSlUyk",
+      "duration": 176,
+      "upload_date": "20211111",
+      "playlists": [
+        "Tutorials"
+      ],
+      "is_short": false
+    },
+    "cpCTxxPFBZI": {
+      "title": "What is Statistical Significance in an A/B Experiment?",
+      "url": "https://www.youtube.com/watch?v=cpCTxxPFBZI",
+      "duration": 80,
+      "upload_date": "20211109",
+      "playlists": [
+        "Statsig for Dummies"
+      ],
+      "is_short": false
+    },
+    "_WuE80AbxjE": {
+      "title": "What is A/B testing? \ud83e\uddea",
+      "url": "https://www.youtube.com/watch?v=_WuE80AbxjE",
+      "duration": 58,
+      "upload_date": "20211108",
+      "playlists": [
+        "Statsig for Dummies"
+      ],
+      "is_short": false
+    },
+    "0HBZxzYYZW4": {
+      "title": "Statsig Product Demo - #1 Experimentation Platform",
+      "url": "https://www.youtube.com/watch?v=0HBZxzYYZW4",
+      "duration": 124,
+      "upload_date": "20211021",
+      "playlists": [
+        "Tutorials"
+      ],
+      "is_short": false
+    },
+    "aFmSVP5Jxmc": {
+      "title": "Introducing Feature Gates and Pulse Metrics",
+      "url": "https://www.youtube.com/watch?v=aFmSVP5Jxmc",
+      "duration": 291,
+      "upload_date": "20211014",
+      "playlists": [
+        "Tutorials"
+      ],
+      "is_short": false
+    },
+    "4L5N82V1-rU": {
+      "title": "Statsig - Build, measure, ship with the #1 platform for product experimentation",
+      "url": "https://www.youtube.com/watch?v=4L5N82V1-rU",
+      "duration": 67,
+      "upload_date": "20210924",
+      "playlists": [],
+      "is_short": false
+    },
+    "ve7LxNAUH0k": {
+      "title": "AI Meetup with Madrona & Statsig",
+      "url": "https://www.youtube.com/watch?v=ve7LxNAUH0k",
+      "duration": 3226,
+      "upload_date": "20230525",
+      "playlists": [
+        "Virtual Meetups"
+      ],
+      "is_short": false
+    },
+    "fX3iKKql_eI": {
+      "title": "The anatomy of experimentation with Thu Le | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=fX3iKKql_eI",
+      "duration": 126,
+      "upload_date": "20251105",
+      "playlists": [],
+      "is_short": true
+    },
+    "dO-GoKzLxRY": {
+      "title": "The value of AI with Malte Ubl | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=dO-GoKzLxRY",
+      "duration": 34,
+      "upload_date": "20251104",
+      "playlists": [],
+      "is_short": true
+    },
+    "r-tRBYDviEE": {
+      "title": "Big tech vs. startups as a data scientist with Tim Chan | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=r-tRBYDviEE",
+      "duration": 66,
+      "upload_date": "20251104",
+      "playlists": [],
+      "is_short": true
+    },
+    "a00kZyIcT_s": {
+      "title": "The biggest surprise moving to a startup with Tim Qi | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=a00kZyIcT_s",
+      "duration": 68,
+      "upload_date": "20251103",
+      "playlists": [],
+      "is_short": true
+    },
+    "V5-eZaF-uvY": {
+      "title": "Forgetting logging, forgetting a gate - we handle it for you with Andre Terron | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=V5-eZaF-uvY",
+      "duration": 76,
+      "upload_date": "20251030",
+      "playlists": [],
+      "is_short": true
+    },
+    "iDBMriipNyE": {
+      "title": "New sport old sport with Vineeth Madhusudanan | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=iDBMriipNyE",
+      "duration": 49,
+      "upload_date": "20251029",
+      "playlists": [],
+      "is_short": true
+    },
+    "tvnRhqhfOuc": {
+      "title": "Track it, train it, tool it with Dylan Lewis | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=tvnRhqhfOuc",
+      "duration": 77,
+      "upload_date": "20251028",
+      "playlists": [],
+      "is_short": true
+    },
+    "c0WPTYMMRT8": {
+      "title": "Randomized Control Trials with Liz Obermaier | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=c0WPTYMMRT8",
+      "duration": 59,
+      "upload_date": "20251028",
+      "playlists": [],
+      "is_short": true
+    },
+    "PGhNe_h9t2I": {
+      "title": "Build vs. Buy with Eric Weber | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=PGhNe_h9t2I",
+      "duration": 90,
+      "upload_date": "20251027",
+      "playlists": [],
+      "is_short": true
+    },
+    "YfuUFZIlesA": {
+      "title": "Why we are here with Vijaye Raji | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=YfuUFZIlesA",
+      "duration": 124,
+      "upload_date": "20251025",
+      "playlists": [],
+      "is_short": true
+    },
+    "m-oTWeeWwYI": {
+      "title": "Customer obsession with Yuhki Yamashita | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=m-oTWeeWwYI",
+      "duration": 133,
+      "upload_date": "20251024",
+      "playlists": [],
+      "is_short": true
+    },
+    "di6EGwaj9Ok": {
+      "title": "Doubling down on stored value with Karandeep Anand | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=di6EGwaj9Ok",
+      "duration": 23,
+      "upload_date": "20251023",
+      "playlists": [],
+      "is_short": true
+    },
+    "EysXXf8yYAI": {
+      "title": "Productivity and AI tooling with Tuhin Srivastava | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=EysXXf8yYAI",
+      "duration": 27,
+      "upload_date": "20251023",
+      "playlists": [],
+      "is_short": true
+    },
+    "MU8cLT74gt4": {
+      "title": "Constraints and performance with Philip Kiely | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=MU8cLT74gt4",
+      "duration": 58,
+      "upload_date": "20251022",
+      "playlists": [],
+      "is_short": true
+    },
+    "zJwOjQYGRzc": {
+      "title": "Metrics and intuition with Yuhki Yamashita | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=zJwOjQYGRzc",
+      "duration": 61,
+      "upload_date": "20251022",
+      "playlists": [],
+      "is_short": true
+    },
+    "yhAdULfnERw": {
+      "title": "The rise of inference engineering with Philip Kiely | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=yhAdULfnERw",
+      "duration": 28,
+      "upload_date": "20251021",
+      "playlists": [],
+      "is_short": true
+    },
+    "f6Cn-2YQ95g": {
+      "title": "Execution buys momentum with Sarah Guo | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=f6Cn-2YQ95g",
+      "duration": 98,
+      "upload_date": "20251020",
+      "playlists": [],
+      "is_short": true
+    },
+    "QutTNR51OgU": {
+      "title": "AA Testing with Ekanth Sethuramalingam | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=QutTNR51OgU",
+      "duration": 44,
+      "upload_date": "20251020",
+      "playlists": [],
+      "is_short": true
+    },
+    "TP57fPB6y1I": {
+      "title": "Reliability, speed and performance with Tuhin Srivastava | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=TP57fPB6y1I",
+      "duration": 57,
+      "upload_date": "20251018",
+      "playlists": [],
+      "is_short": true
+    },
+    "GHzqqBV9psM": {
+      "title": "Investing in eval infrastructure with Karandeep Anand | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=GHzqqBV9psM",
+      "duration": 62,
+      "upload_date": "20251017",
+      "playlists": [],
+      "is_short": true
+    },
+    "zGZ5T3Tlrjg": {
+      "title": "How LLMs are changing product led growth with Sriram Sridharan | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=zGZ5T3Tlrjg",
+      "duration": 59,
+      "upload_date": "20251017",
+      "playlists": [],
+      "is_short": true
+    },
+    "c4mft1KRWFo": {
+      "title": "Time saved is tablestakes with Jay Parikh | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=c4mft1KRWFo",
+      "duration": 74,
+      "upload_date": "20251016",
+      "playlists": [],
+      "is_short": true
+    },
+    "TS_hMOByMaE": {
+      "title": "Great tools power great culture with Jay Parikh | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=TS_hMOByMaE",
+      "duration": 64,
+      "upload_date": "20251015",
+      "playlists": [],
+      "is_short": true
+    },
+    "MQCZTeW6sDc": {
+      "title": "Pay attention to segments with Ekanth Sethuramalingam | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=MQCZTeW6sDc",
+      "duration": 55,
+      "upload_date": "20251015",
+      "playlists": [],
+      "is_short": true
+    },
+    "ivobS9CXuGI": {
+      "title": "Experimentation is humbling with Ekanth Sethuramalingam | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=ivobS9CXuGI",
+      "duration": 61,
+      "upload_date": "20251015",
+      "playlists": [],
+      "is_short": true
+    },
+    "vaX8InCpK44": {
+      "title": "Metric Rituals with Yuhki Yamashita | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=vaX8InCpK44",
+      "duration": 21,
+      "upload_date": "20251014",
+      "playlists": [],
+      "is_short": true
+    },
+    "D6UQSRXcs_s": {
+      "title": "Good enough is mediocre with Yuhki Yamashita | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=D6UQSRXcs_s",
+      "duration": 51,
+      "upload_date": "20251014",
+      "playlists": [],
+      "is_short": true
+    },
+    "7JwsYryKf9E": {
+      "title": "Instability is opportunity with Sarah Guo | Sigsum 2025",
+      "url": "https://www.youtube.com/watch?v=7JwsYryKf9E",
+      "duration": 57,
+      "upload_date": "20251013",
+      "playlists": [],
+      "is_short": true
+    },
+    "tRFYpKJQjhU": {
+      "title": "Marketing in Tech #tech #swe #software #statsig #meme #office #career",
+      "url": "https://www.youtube.com/watch?v=tRFYpKJQjhU",
+      "duration": 11,
+      "upload_date": "20250731",
+      "playlists": [],
+      "is_short": true
+    },
+    "f57qz_6gOAs": {
+      "title": "Product Talk | What's the best product you've launched?",
+      "url": "https://www.youtube.com/watch?v=f57qz_6gOAs",
+      "duration": 40,
+      "upload_date": "20250730",
+      "playlists": [],
+      "is_short": true
+    },
+    "zExwj2Dk4VU": {
+      "title": "Solving Bugs At Random Times #Tech #AI #SoftwareEngineering #ABtesting #Product #Career",
+      "url": "https://www.youtube.com/watch?v=zExwj2Dk4VU",
+      "duration": 6,
+      "upload_date": "20250724",
+      "playlists": [],
+      "is_short": true
+    },
+    "POxHsgrOkSI": {
+      "title": "Why Better Tools Don\u2019t Replace Great Data Scientists",
+      "url": "https://www.youtube.com/watch?v=POxHsgrOkSI",
+      "duration": 66,
+      "upload_date": "20250724",
+      "playlists": [],
+      "is_short": true
+    },
+    "AaySM6hyuro": {
+      "title": "How Will AI Change Data Science? #ai #artificialintelligence #tech #softwareengineer #officd",
+      "url": "https://www.youtube.com/watch?v=AaySM6hyuro",
+      "duration": 61,
+      "upload_date": "20250709",
+      "playlists": [],
+      "is_short": true
+    },
+    "l_YuUmLc4IU": {
+      "title": "Inside the Intern Life | Statsig #software #tech #career #recruiting #ai",
+      "url": "https://www.youtube.com/watch?v=l_YuUmLc4IU",
+      "duration": 156,
+      "upload_date": "20250707",
+      "playlists": [],
+      "is_short": true
+    },
+    "nZRpahWa8pk": {
+      "title": "Vercel Ship 25 Highlights #tech #softwareengineer #data",
+      "url": "https://www.youtube.com/watch?v=nZRpahWa8pk",
+      "duration": 85,
+      "upload_date": "20250627",
+      "playlists": [],
+      "is_short": true
+    },
+    "r4YeUJBZ8U0": {
+      "title": "Data Science Meetup 2025",
+      "url": "https://www.youtube.com/watch?v=r4YeUJBZ8U0",
+      "duration": 14,
+      "upload_date": "20250617",
+      "playlists": [],
+      "is_short": true
+    },
+    "VXfpzUXevcE": {
+      "title": "A Day in London With Our Event Marketing Manager",
+      "url": "https://www.youtube.com/watch?v=VXfpzUXevcE",
+      "duration": 52,
+      "upload_date": "20250606",
+      "playlists": [],
+      "is_short": true
+    },
+    "QUDc4wNz8Lg": {
+      "title": "Inside the Life of a Software Engineer",
+      "url": "https://www.youtube.com/watch?v=QUDc4wNz8Lg",
+      "duration": 62,
+      "upload_date": "20250605",
+      "playlists": [],
+      "is_short": true
+    },
+    "bIwzYFvA72I": {
+      "title": "Behind the Tech Sponsorship: Statsig CEO & Atlassian CTO on Fueling Williams F1",
+      "url": "https://www.youtube.com/watch?v=bIwzYFvA72I",
+      "duration": 104,
+      "upload_date": "20250530",
+      "playlists": [],
+      "is_short": true
+    },
+    "cmrys11BPdY": {
+      "title": "Inside the Life of a Tech Event Manager",
+      "url": "https://www.youtube.com/watch?v=cmrys11BPdY",
+      "duration": 51,
+      "upload_date": "20250529",
+      "playlists": [],
+      "is_short": true
+    },
+    "B8L32RmeMoQ": {
+      "title": "Gatekeeping in Product Management",
+      "url": "https://www.youtube.com/watch?v=B8L32RmeMoQ",
+      "duration": 54,
+      "upload_date": "20250528",
+      "playlists": [],
+      "is_short": true
+    },
+    "MCZPKmwblqY": {
+      "title": "Why Perfectionism Kills Great Products",
+      "url": "https://www.youtube.com/watch?v=MCZPKmwblqY",
+      "duration": 58,
+      "upload_date": "20250522",
+      "playlists": [],
+      "is_short": true
+    },
+    "-mMPCxlR-Jw": {
+      "title": "The Importance of Clockspeed",
+      "url": "https://www.youtube.com/watch?v=-mMPCxlR-Jw",
+      "duration": 41,
+      "upload_date": "20250522",
+      "playlists": [],
+      "is_short": true
+    },
+    "DLPUUbBKt5Y": {
+      "title": "Build vs. Buy | Is it better to build an in-house experimentation service?",
+      "url": "https://www.youtube.com/watch?v=DLPUUbBKt5Y",
+      "duration": 59,
+      "upload_date": "20250522",
+      "playlists": [],
+      "is_short": true
+    },
+    "GYlzYAuBKwc": {
+      "title": "The Journey of a First-Time Tech Founder | Statsig CEO",
+      "url": "https://www.youtube.com/watch?v=GYlzYAuBKwc",
+      "duration": 64,
+      "upload_date": "20250520",
+      "playlists": [],
+      "is_short": true
+    }
+  },
+  "ampliteer_top_picks": [
+    {
+      "why": "Baseline product walkthrough \u2014 Statsig terminology",
+      "search": "Introduction to Statsig: General Onboarding"
+    },
+    {
+      "why": "Data flow / integration architecture",
+      "search": "Deep Dive 101: SDK logging events and exposures"
+    },
+    {
+      "why": "Enterprise data stack fit (Snowflake, BigQuery)",
+      "search": "Warehouse Native Experimentation"
+    },
+    {
+      "why": "Bridge between Amplitude analytics + Statsig experimentation",
+      "search": "Using metrics and analytics to supercharge"
+    },
+    {
+      "why": "Statsig's framing of product analytics",
+      "search": "Product Analytics 101"
+    },
+    {
+      "why": "How Pulse calculates statistical lift",
+      "search": "Basic Pulse Results"
+    },
+    {
+      "why": "How Statsig handles funnels vs Amplitude",
+      "search": "Funnel Conversions"
+    },
+    {
+      "why": "CSM advisory framing \u2014 KPI selection",
+      "search": "Shallow vs Business Metrics"
+    },
+    {
+      "why": "Proactive experiment suggestions for customers",
+      "search": "10 Experiments to Run Before You Die"
+    },
+    {
+      "why": "Customer success social proof",
+      "search": "Customer Stories"
+    }
+  ],
+  "deeper_notebook": "https://notebooklm.google.com/notebook/98a23c62-952b-4683-ad46-e45b41d79a8a",
+  "deeper_notebook_access_note": "requires LXD-granted access \u2014 request from Nathan Livni"
+}
