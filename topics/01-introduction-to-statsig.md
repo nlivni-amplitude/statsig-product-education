@@ -51,10 +51,3 @@ The integration matters because every shipped change becomes a measurable change
 
 **Where it breaks down:** Amplitude historically separates Analytics from Experiment as distinct products with their own SDKs. Statsig bundles flag + experiment + analytics into one product surface and one SDK call. The "loop" is more tightly coupled in Statsig's UX; in Amplitude it's more modular, which can be a plus (use only what you need) or a minus (more wiring to make the loop work).
 
----
-
-### LO4. Recognize this is an Amplitude product, not a competitor.
-
-**Prompt:** *Statsig is now an Amplitude product. What does that change about how an Ampliteer should talk about it internally?*
-
-**Canonical answer:** Statsig and Amplitude (Analytics, Experiment) are sibling products in the same portfolio. Frame comparisons like you would Amplitude Analytics vs. Amplitude Experiment — different surfaces, different opinions, but one company. Avoid "competitive" or "objection" framing. When something is genuinely stronger in Statsig (e.g., warehouse-native experimentation, multi-arm bandits), say so — it's still an Amplitude product getting credit.
