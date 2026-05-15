@@ -123,7 +123,42 @@ If your holdout cohort has nearly identical bottom-line metrics to the rest of y
 
 ---
 
-### LO9. Contrast Statsig experiments with Amplitude Experiment.
+### LO9. Use multi-arm bandits when you want to optimize, not just learn.
+
+**Prompt:** *You have 5 variants of a CTA button and you want to find the winner without making most users see a loser. What's a multi-arm bandit, and when is it the right tool vs a standard A/B test?*
+
+**Canonical answer:**
+
+**Multi-arm bandit (MAB)** is an adaptive experimentation method that **dynamically shifts traffic toward better-performing variants** as the experiment runs. Instead of fixed 50/50 (or 20/20/20/20/20) splits, a bandit allocates more traffic to whatever's winning so far.
+
+**How it works (Statsig's Autotune uses Thompson Sampling):**
+- Each variant has a current "probability of being the best" estimate.
+- The algorithm allocates traffic proportional to that probability.
+- Example: if Variant A has 60% chance of being best, it gets ~60% of traffic; the other 40% is split among the rest.
+- As data accumulates, the algorithm converges — winners get more traffic, losers get less.
+- When one variant beats the second-best by a configurable margin, the bandit terminates and declares a winner.
+
+**When MAB is the right tool:**
+- **You want to optimize, not just learn.** A/B tests give clean causal effects but expose 50% of users to the loser; bandits minimize "regret" (cumulative loss from showing the loser).
+- **Many variants to choose between** (3+). With 5 variants in an A/B, only 20% see any one variant — slow. Bandits concentrate traffic faster.
+- **The metric is fast-converging.** Click-through rate, immediate conversion. Bandits need to see the signal quickly to adapt.
+- **You don't need a clean statistical readout.** Bandits are optimizing, not testing a hypothesis.
+
+**When MAB is the wrong tool:**
+- **You need a clean p-value / causal estimate** for stakeholder communication. Bandits don't give you that — they give you "this won."
+- **Delayed-reward metrics** (D7 retention, revenue over time). The bandit can't adapt fast enough.
+- **Network effects between users.** Bandit assumes user outcomes are independent.
+- **You actually want to learn something.** A/B answers "did this work and by how much?" Bandit answers "which one is best?" — different questions.
+
+**Variants:**
+- **Standard (base) bandit** — Thompson Sampling on one global metric. Best when there's a "one size fits all" winner.
+- **Contextual bandit** — incorporates user attributes (e.g., country, plan tier) and may find that different variants win for different segments. Useful when personalization is the goal.
+
+**Practical:** Statsig's Autotune feature implements multi-arm bandits as a first-class option. Amplitude Experiment doesn't have a direct equivalent (typically requires custom integration or a separate tool). Worth flagging when discussing experimentation tooling differences.
+
+---
+
+### LO10. Contrast Statsig experiments with Amplitude Experiment.
 
 **Prompt:** *How do Statsig experiments compare to Amplitude Experiment? Where do they diverge?*
 

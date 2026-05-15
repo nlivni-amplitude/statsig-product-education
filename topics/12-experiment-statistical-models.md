@@ -189,6 +189,104 @@ Both Statsig and Amplitude Experiment auto-flag SRM. **Take the flag seriously.*
 
 ---
 
+### LO10. Correct for multiple comparisons (Bonferroni, Benjamini-Hochberg).
+
+**Prompt:** *Your scorecard has 12 metrics and 3 test variants. A coworker celebrates: "look, metric #7 moved with p=0.04 on Variant B!" What's the issue, and what would Bonferroni or Benjamini-Hochberg do about it?*
+
+**Canonical answer:**
+**The issue:** every additional metric or variant is another opportunity for a false positive. With 12 metrics × 3 variants = 36 comparisons at α=0.05, the chance of *at least one* false positive jumps from 5% to ~84%. "Look, this one moved" is exactly what you'd expect by chance.
+
+**Two standard corrections:**
+
+- **Bonferroni correction** — divide α by the number of comparisons. With 36 tests at α=0.05, each comparison is judged at α=0.05/36 ≈ 0.0014. Strict. Controls the *Family-Wise Error Rate* (probability of any false positive). Easy to explain. Too conservative when you have many real effects.
+
+- **Benjamini-Hochberg (BH) procedure** — controls the *False Discovery Rate* (expected fraction of false positives among the things you call significant). Less strict than Bonferroni; better statistical power. Statsig uses BH on top-line metrics when enabled.
+
+**When to apply:**
+- Multiple test variants (3+ arms): apply across variants.
+- Many metrics in the scorecard: apply across metrics (often weighted — primaries get more α than secondaries).
+- Both: apply both layers.
+
+**Practical:** both Statsig and Amplitude Experiment have toggleable Bonferroni/BH corrections in experiment settings. **The right default is to enable BH** if you have >1 primary metric or >2 variants.
+
+**The fix for the coworker's claim:** ask whether the scorecard applied any correction. If not, the p=0.04 result is probably noise.
+
+---
+
+### LO11. Use AA tests to validate the experimentation pipeline.
+
+**Prompt:** *Your team is new to running experiments. What's an AA test, and why would you run one before your first real A/B?*
+
+**Canonical answer:**
+**An AA test is an A/B test where both variants serve the exact same experience.** Identical. No real treatment.
+
+**What you should see:**
+- Exposures flowing through to both arms in the configured split
+- Roughly 5% of metrics flagging as "statistically significant" at α=0.05 — because that's literally what 5% false-positive rate means
+- No Sample Ratio Mismatch
+- No structural difference between the arms
+
+**Why run one:**
+- **Trust the pipeline before you trust the results.** If your AA shows SRM, broken exposure logging, or 20% of metrics flagging significant, something in the ingestion / assignment / instrumentation is wrong. Better to find that before you ship a "winner" you can't trust.
+- **Calibrate your team.** New experimenters often panic when they see one metric flag significant — an AA test makes them feel the 5% false-positive rate.
+- **Validate metric variance assumptions.** If a metric's actual variance differs wildly from what the platform assumes, your sample size calculations will be wrong.
+
+**Online vs offline AA:** an online AA runs against real traffic. An offline AA queries historical data and randomly splits it post-hoc. Statsig runs simulated AA tests automatically in the background every day to monitor platform health.
+
+---
+
+### LO12. Decide when to call an experiment vs defer the decision.
+
+**Prompt:** *An experiment has run for the planned duration. Primary metric is positive but the CI just barely excludes zero. Secondary metrics are mixed. The team is split on whether to ship. What's the framework?*
+
+**Canonical answer:**
+
+**Three legitimate paths:**
+
+1. **Ship the variant** — primary cleared the bar (significance + meaningful magnitude); guardrails are clean; secondaries don't reveal anything alarming.
+2. **Roll back / ship control** — primary went the wrong way OR a guardrail regressed badly.
+3. **Conclude experiment, defer decision** — stop running, stop exposing new users, but don't ship either variant yet. Used when:
+   - Results are inconclusive but you've already spent the budget you planned
+   - You want to consult stakeholders before deciding
+   - You want to lock the data in place while a follow-up experiment is designed
+   - The metric improved but you suspect novelty effect — defer and watch
+
+**The "conclude and defer" path matters.** Without it, teams get stuck: experiment is still running (wasting traffic), or they pick under-evidenced. Defer cleanly separates "stop the experiment" from "decide what to do."
+
+**What to NOT do:**
+- **Keep running indefinitely waiting for clarity.** That's just delaying the decision and costs traffic. If you didn't hit significance in the planned duration, you've already learned that the effect is smaller than you thought; running longer is selection bias.
+- **Run a follow-up experiment "to confirm"** without changing anything. That's just a second chance to roll the dice. If you want to confirm, change something material (longer run, different segment, new variant).
+
+**Both Statsig and Amplitude Experiment** support "conclude without shipping" as an explicit decision state — use it.
+
+---
+
+### LO13. Understand the delta method for ratio metrics.
+
+**Prompt:** *You're measuring clicks-per-session in an experiment. Your tool flags this as a "ratio metric." Why does it need special handling?*
+
+**Canonical answer:**
+**A ratio metric** is one where the numerator and denominator both vary per user — like clicks/session, revenue/session, or conversion rate.
+
+**Why it needs special handling:**
+- For simple metrics (e.g., total revenue per user), variance is straightforward — each user contributes one observation.
+- For ratio metrics, the numerator and denominator are **correlated** (a user with more sessions tends to have more clicks). Naïvely computing the variance of clicks/sessions as if they were independent **gives the wrong confidence interval** — usually wider than it should be, sometimes narrower.
+
+**The delta method** is the standard statistical correction. It computes the variance of a ratio using a Taylor approximation that accounts for:
+- The variance of the numerator
+- The variance of the denominator
+- The **covariance** between them
+
+Result: confidence intervals on ratio metrics are accurate even though the underlying variables move together.
+
+**Why you need to know:**
+- **It runs automatically in Statsig and Amplitude Experiment** — you don't compute it yourself. But if you ever export raw data and compute confidence intervals by hand, you'll get wrong answers if you ignore covariance.
+- **Recognize when a metric is a ratio.** Anything per-user, per-session, or per-event with a variable denominator. If the platform flags "delta method applied," that's correct behavior.
+
+**For relative lifts** (e.g., "+5% relative to control"), platforms sometimes use a related approach called **Fieller intervals**, which the delta method approximates for large samples.
+
+---
+
 ## When to point to live docs
 
 If a learner asks about a specific UI configuration option (where the Bayesian toggle is, how to enable sequential testing in Statsig, what the defaults are), point them to:
