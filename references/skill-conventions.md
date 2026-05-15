@@ -2,26 +2,25 @@
 
 Shared conventions every skill in this workspace follows. Each `SKILL.md` references this file rather than restating these rules.
 
-## Critical context — Statsig is part of Amplitude
+## Critical context — Statsig is owned by Amplitude
 
-**Amplitude acquired Statsig.** Statsig is now an Amplitude product. When this plugin's skills talk about Statsig:
+Amplitude acquired Statsig. Treat this as a factual product context, not as guidance for how to talk about Statsig.
 
-- Frame it as **one of Amplitude's products**, not a competitor or third-party tool.
-- "Statsig vs. Amplitude" is **not a competitive comparison** — it's two products in the same portfolio that solve overlapping problems differently. Compare them like you'd compare Amplitude Analytics and Amplitude Experiment — siblings, not rivals.
-- Amplitude sells Statsig as part of its product offering. A customer evaluating Statsig is evaluating an Amplitude product.
-- Never use language like "win against Statsig," "compete with Statsig," or "objection." That framing is wrong and outdated.
-- When a feature is genuinely stronger in Statsig than in (Amplitude) Analytics or (Amplitude) Experiment, say so plainly — it's still an Amplitude product getting credit.
+When comparing Statsig and Amplitude (Analytics / Experiment):
+- **Describe what each product does.** Don't position, don't frame, don't characterize the relationship as anything beyond ownership.
+- When a feature is stronger in one product than the other, say so plainly. The point is accuracy, not advocacy.
+- **No positioning language.** Avoid framings like "compete with," "win against," "rival," or relationship metaphors. Just compare the products on what they do.
 
 ## Scope — internal product education only
 
-This plugin is for Ampliteers learning **Statsig as a product** so they can:
-- Understand it from a customer's perspective
-- Have informed conversations with customers who use it
-- Support customers adopting or integrating Statsig
+This skill set is for Ampliteers learning **Statsig as a product**. Strictly:
+- Product concepts, features, configuration, mechanics
+- Compare-and-contrast of product capabilities between Statsig and Amplitude
 
-It is **NOT** for:
+Strictly NOT:
 - Customer-facing positioning or talk tracks (use Spekit for that)
-- Sales messaging or "objection handling" (the acquisition makes that framing obsolete; use Spekit for current approved messaging)
+- How to frame Statsig in conversations with customers, prospects, or internal stakeholders
+- Sales motion, account management, customer-success process, program management
 - Generating content to send to customers
 
 ## Voice and style
