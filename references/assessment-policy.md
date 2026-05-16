@@ -4,10 +4,25 @@ The rules every assessment skill (`statsig-take-quiz`, test-out flows in `learn-
 
 ## Structure overview
 
-For any topic in `data/topics/*.md`:
+Two distinct flows: the Take a Course flow (in `learn-statsig`) is **lesson-first**. The standalone `statsig-take-quiz` skill still supports pre-test, post-test, and cumulative modes for learners who explicitly want them.
+
+**Course flow** (default path from `learn-statsig` → Take a Course):
 
 ```
-PRE-TEST  →  (test out or take the lesson)  →  POST-TEST  →  (mastered or review)
+LESSON  →  "What's next?" prompt  →  Continue / Ask Q&A / Quiz me / Pause
+                                       ↓ (only if learner picks "Quiz me")
+                                    POST-TEST  →  (mastered or review)
+
+(after the last module of a course)
+              ↓
+     "Want a cumulative exam?"  →  Yes → CUMULATIVE EXAM
+                                  No → mark complete and move on
+```
+
+**Standalone quiz flow** (`statsig-take-quiz` invoked directly, or via "Test my knowledge" entry door):
+
+```
+PRE-TEST (optional)  →  LESSON (only if pre-test fails)  →  POST-TEST  →  (mastered or review)
                                                               ↓
                                   (after all chosen topics)
                                                               ↓
@@ -15,6 +30,8 @@ PRE-TEST  →  (test out or take the lesson)  →  POST-TEST  →  (mastered or 
                                                               ↓
                                                   (passed or review missed)
 ```
+
+The pre-test / test-out path is reachable only via the standalone quiz skill — not as part of the default course experience. Pre-tests put learners on the defensive before they've seen the material; courses now lead with the lesson and offer the quiz as a follow-on.
 
 ## Question generation rules
 
