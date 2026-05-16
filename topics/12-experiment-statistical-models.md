@@ -287,6 +287,72 @@ Result: confidence intervals on ratio metrics are accurate even though the under
 
 ---
 
+### LO14. Understand stratified sampling for variance reduction.
+
+**Prompt:** *What is stratified sampling, when does it help, and how does it differ from CUPED?*
+
+**Canonical answer:**
+
+**Stratified sampling** divides the user population into mutually-exclusive strata (e.g., new vs. returning, country, plan tier) and assigns variants **within each stratum** at the configured allocation. Every stratum ends up with the same treatment:control ratio. This eliminates the chance that, say, 60% of your power users land in treatment by random allocation.
+
+**How it works:**
+- Define stratification dimensions before the experiment (e.g., `country × signup_cohort`).
+- The bucketing algorithm splits users into strata and runs the 50/50 (or whatever) within each.
+- Result: across the whole experiment, your strata are balanced — control and treatment have the same proportion of US-vs-EU users, new-vs-returning, etc.
+
+**Why it reduces variance:**
+When you compare control to treatment, you're no longer comparing groups that differ on stratification variables. Any *between-strata* difference (e.g., US users convert more than EU users) is removed from the noise. You only see *within-stratum* differences — which is the actual treatment effect.
+
+Effect size on confidence intervals: typically 5-20% tighter CIs, depending on how predictive your strata are of the metric.
+
+**Stratified sampling vs. CUPED — when to use which:**
+| | Stratified sampling | CUPED |
+|---|---|---|
+| **What it controls for** | Categorical user attributes you specify | Each user's pre-experiment value of the metric |
+| **When to use** | Known imbalanced segments (e.g., heavy users dominate the metric) | Any metric where pre-period behavior predicts post-period |
+| **Setup cost** | Pick the right strata; too many = thin cells | None — automatic if pre-period data exists |
+| **Stackable?** | Yes, combines with CUPED | Yes |
+
+**Practical recommendation:** if you have an obvious dimension where the metric varies a lot (country, paying vs. free, mobile vs. web), stratify on it. CUPED on top is purely additive.
+
+**Common pitfalls:**
+- **Strata too thin:** if any stratum has fewer than ~100 users per arm, you get noisier estimates inside it, not less. Limit to 2-4 strata of meaningful size.
+- **Stratifying on post-treatment attributes:** never stratify on something the experiment itself can change. Pre-experiment attributes only.
+
+---
+
+### LO15. Recognize heterogeneous treatment effects and use Differential Impact Detection.
+
+**Prompt:** *What are heterogeneous treatment effects, and how does Statsig surface them?*
+
+**Canonical answer:**
+
+A **heterogeneous treatment effect (HTE)** is when the treatment effect varies across subgroups. The global lift might be +2%, but for new users it's +8% and for power users it's -3%. The global number hides both.
+
+**Why this matters:**
+- A non-zero global effect can mask a negative effect on a critical segment (regress on power users while a "+2% lift" ships).
+- A null global result can hide a real effect that's positive for one group and negative for another that cancel out.
+- Shipping decisions based on the global number alone are routinely wrong when effects are heterogeneous.
+
+**The traditional fix:** manually segment after the fact. Re-run analysis sliced by country, cohort, plan tier, etc. The problem: every slice is a multiple-comparisons risk (see LO10). Slicing 20 ways and reporting the most extreme is p-hacking.
+
+**Statsig's Differential Impact Detection (DID):** auto-surfaces segments where the treatment effect is significantly different from the global effect, with multiple-comparison correction applied. Rather than you manually picking 20 slices, the platform scans property dimensions and reports only segments where the difference is statistically defensible.
+
+**How to read a DID result:**
+- **Global lift:** +2% on conversion.
+- **DID surfaces:** "Mobile users: -1.5% (significant). Desktop users: +4% (significant)."
+- **Decision implication:** the change is good for desktop, bad for mobile. Don't ship as-is; consider gating to desktop only or fixing the mobile regression first.
+
+**When to look for HTE:**
+- New flows where you don't know how the change interacts with different audiences.
+- Big visual changes (different cohorts react differently to UI shifts).
+- Performance changes (mobile/desktop, slow-network/fast-network).
+- Anything where you suspect segments might diverge.
+
+**Amplitude counterpart:** Amplitude Experiment doesn't auto-detect HTE; analysts segment results manually post-hoc. Statsig's DID is the first-class equivalent of that manual workflow with stat correction baked in.
+
+---
+
 ## When to point to live docs
 
 If a learner asks about a specific UI configuration option (where the Bayesian toggle is, how to enable sequential testing in Statsig, what the defaults are), point them to:
