@@ -78,6 +78,43 @@ Skipping diagnostics is how teams ship "winning experiments" that turn out to ha
 - If the absolute lift is +3% but the cost-to-ship is high (a major engineering rewrite), the lift has to clear the bar of "worth that cost."
 - If we only ran for 2 days and the metric is week-long retention, the data isn't mature; wait.
 
+**Worked example — reading a full scorecard:**
+
+| Metric | Tier | Lift | 95% CI | p-value | Decision contribution |
+|---|---|---|---|---|---|
+| Sign-up completion | **Primary** | **+3.0%** | **[+0.5%, +5.5%]** | **0.02** | Clear ship signal |
+| Time-to-first-action | Secondary | -8.0% (faster) | [-14%, -2%] | 0.01 | Diagnostic — confirms the flow is faster |
+| D1 retention | Guardrail | -0.4% | [-1.1%, +0.3%] | 0.27 | Within tolerance — null result on retention |
+| D7 retention | Guardrail | -0.2% | [-1.5%, +1.1%] | 0.77 | Within tolerance — too soon to be definitive |
+| Errors / session | Guardrail | +2.0% (more errors) | [+0.1%, +3.9%] | 0.04 | **Flag** — error rate up, needs follow-up |
+| Page latency | Guardrail | +5ms | [-8ms, +18ms] | 0.45 | Null — no meaningful change |
+| Support tickets | Secondary | +0.8% | [-2.3%, +3.9%] | 0.61 | Null, but the wide CI means low power |
+
+**How to actually read this:**
+
+1. **Start with the primary.** +3.0% lift, CI excludes zero, p < 0.05. That's the headline.
+2. **Check the secondary that diagnoses it.** Time-to-first-action -8% says "users got through the flow faster." Consistent with the primary — the flow change is doing what we expected.
+3. **Walk every guardrail.**
+   - **D1 retention** -0.4% with CI [-1.1%, +0.3%]. CI crosses zero, p high → consistent with no effect. The point estimate is tiny.
+   - **Errors / session** +2.0%, CI excludes zero, p = 0.04. **This is the one that matters.** The flow change is producing more errors. Open question: is it a real bug or are users encountering edges of the new flow they didn't see before?
+   - Latency and support tickets are nulls.
+4. **Synthesize:** primary is a clear win, but there's a real error-rate regression. Three options:
+   - **Ship and fix:** if you know what the errors are and they're benign (e.g., a validation message that's working as designed but firing more), ship and clean up.
+   - **Ship and instrument:** ship, but add monitoring on the error spike so it's caught if it gets worse at full rollout.
+   - **Don't ship yet:** if errors are concerning enough that the +3% sign-up lift could turn negative once you account for users who hit errors, fix and re-test.
+
+**Pitfalls in reading a scorecard:**
+- **Cherry-picking the green metrics.** If 8 of 12 metrics are unflagged and the team celebrates the 4 winners, look at how many were "expected to be flat" vs. "expected to move." Movement on unrelated metrics is noise.
+- **Confusing "p > 0.05" with "no effect."** Time-to-first-action might be +12% with CI [-3%, +27%] and p=0.10. That's not "no effect," that's "insufficient power." The point estimate is large; the CI is too wide to call.
+- **Forgetting the multi-comparison correction.** If the scorecard has 12 metrics × 1 variant = 12 tests at α=0.05, expect ~0.6 false positives on average even under the null. See LO10 in topic 12 (Statistical Models).
+- **Reading a 2-day result on a 7-day metric.** D7 retention can't have settled yet. Either wait or report it as "TBD."
+
+**Statsig-specific scorecard signals to know:**
+- **CUPED applied** indicator — confirms variance reduction is active on this metric.
+- **Delta method applied** indicator — confirms ratio-metric variance correction is on.
+- **Sequential testing / always-valid** indicator — confirms the CI is robust to peeking.
+- **Differential Impact Detection (DID) callout** — surfaces segments where the effect diverges from global. Don't ignore those.
+
 ---
 
 ### LO6. Reason about interaction effects.
@@ -155,6 +192,54 @@ If your holdout cohort has nearly identical bottom-line metrics to the rest of y
 - **Contextual bandit** — incorporates user attributes (e.g., country, plan tier) and may find that different variants win for different segments. Useful when personalization is the goal.
 
 **Practical:** Statsig's Autotune feature implements multi-arm bandits as a first-class option. Amplitude Experiment doesn't have a direct equivalent (typically requires custom integration or a separate tool). Worth flagging when discussing experimentation tooling differences.
+
+**Worked example — Thompson Sampling on 5 CTA variants:**
+
+You're testing 5 button-copy variants. The metric is click-through rate. After each new sample, Thompson Sampling updates a Beta posterior for each variant's true CTR.
+
+Day 1 — 1,000 users total, 200 per variant (uniform start):
+| Variant | Clicks | Trials | Observed CTR | Beta posterior |
+|---|---:|---:|---:|---|
+| A | 18 | 200 | 9.0% | Beta(18+1, 182+1) |
+| B | 22 | 200 | 11.0% | Beta(22+1, 178+1) |
+| C | 14 | 200 | 7.0% | Beta(14+1, 186+1) |
+| D | 25 | 200 | 12.5% | Beta(25+1, 175+1) |
+| E | 16 | 200 | 8.0% | Beta(16+1, 184+1) |
+
+For each incoming user, the bandit draws one random sample from each Beta posterior and routes the user to the variant with the highest sampled value. Variants with higher posterior means (D, B) win the draw more often; variants with wide posteriors (everyone, since N=200 is small) still win sometimes due to uncertainty.
+
+Day 3 — after 10,000 cumulative users, the allocation has shifted:
+| Variant | Clicks | Trials | CTR | % of recent traffic |
+|---|---:|---:|---:|---:|
+| A | 38 | 460 | 8.3% | 4% |
+| B | 290 | 2,400 | 12.1% | 25% |
+| C | 30 | 380 | 7.9% | 3% |
+| D | 720 | 5,800 | 12.4% | 60% |
+| E | 76 | 960 | 7.9% | 8% |
+
+Note three things:
+- **Losers (A, C, E) are still getting *some* traffic** — Thompson Sampling never zeroes a variant out completely. Their posteriors are wider so they occasionally win a draw.
+- **D and B are close** — 12.4% vs 12.1%. The bandit hasn't yet decided, so traffic is roughly proportional to "probability of being the best."
+- **Total "regret"** (clicks lost to showing non-D variants) is much lower than a uniform 20% split would have produced. That's the point of the bandit.
+
+Day 7 — the bandit terminates:
+- D has 14,000 trials, B has 4,200 trials, others have ~600 each.
+- D's posterior is tight at 12.3% ± 0.3%. B's is at 12.0% ± 0.6%. The 95% credible interval on (D − B) is something like [+0.1%, +0.7%] — narrowly positive.
+- Configured termination margin (e.g., "stop when the leader beats second-best by 99% probability") is met. D is declared the winner.
+
+**Compare to a 5-arm A/B at the same volume:** 22,400 users / 5 = 4,480 per arm. Per-arm CIs would be wider on D than under the bandit (which concentrated samples there), and B vs. D might not have separated significantly at all.
+
+**The cost the bandit paid:**
+- No clean lift estimate for A, C, E (only ~600 trials each — too few to estimate their CTR precisely).
+- No p-value on "D beats baseline" you could put in a stakeholder document. You just have "D won."
+
+**The cost a 5-arm A/B would have paid:**
+- 4x more users exposed to the worst variants (C and E) than the bandit allocated to them. That's the "regret" — real clicks lost.
+
+**Edge cases worth knowing:**
+- **Non-stationary metric.** If user behavior drifts (seasonality, new feature launch), the bandit may chase noise. Use a *discounting* bandit or set a cap on max traffic share per variant.
+- **Slow-converging metric.** D7 retention: by the time you have the signal, the experiment has been running for weeks and the bandit can't adapt fast enough to be useful.
+- **Network effects.** If users see each other's variants (collaborative product), the bandit's independence assumption breaks.
 
 ---
 

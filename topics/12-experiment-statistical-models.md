@@ -28,6 +28,29 @@ The Statsig Academy corpus names sequential testing, Bayesian options, CUPED, an
 - **They usually agree** for clean experiments with enough data. They diverge when data is sparse or when priors are informative.
 - **Tool support:** both Statsig and Amplitude Experiment support both modes; frequentist is typically the default.
 
+**Worked example — same data, two readings:**
+
+Experiment on a checkout button. Control: 4,800 / 60,000 users converted (8.0%). Treatment: 5,160 / 60,000 (8.6%). Lift = +0.6 percentage points (about +7.5% relative).
+
+- **Frequentist read:** Z-test on two proportions. Test statistic ≈ 3.8. p ≈ 0.00014. 95% CI on the lift in percentage points ≈ [+0.29, +0.91]. Decision: reject the null; the effect is statistically distinguishable from zero. The CI does not tell you the probability the true lift is in that range.
+- **Bayesian read (with a weakly-informative prior centered at 0% lift):** posterior on the lift has mean ≈ +0.6 pp, 95% credible interval ≈ [+0.29, +0.91], **P(true lift > 0) ≈ 99.99%**, P(true lift > 0.3pp) ≈ 95%. The credible interval *does* mean "given the data and prior, the true lift is in this range with 95% probability."
+
+**Why the intervals look identical:** with this much data and a weak prior, the posterior is dominated by the likelihood — Bayesian and frequentist arrive at the same numerical interval. What differs is the **interpretation language** (probability statements about the parameter vs. probability statements about repeated sampling).
+
+**Where they diverge — small sample:**
+
+Same setup but only 1,200 users per arm. Control: 96 / 1,200 (8.0%). Treatment: 103 / 1,200 (8.6%). Lift +0.6 pp.
+
+- **Frequentist:** p ≈ 0.61, 95% CI [-1.6%, +2.8%]. Decision: cannot reject the null. The data is consistent with no effect. Don't ship on this evidence.
+- **Bayesian with a prior derived from past similar experiments** that suggests "small positive lifts are common, large negative lifts are rare": posterior tilts toward positive. P(lift > 0) ≈ 78%. Decision: still not enough to ship on 95%, but the qualitative signal is "more likely than not." Some teams ship at lower thresholds (90%, even 80%) when downside is bounded.
+
+**The takeaway:** Bayesian shines when you have a defensible prior and sparse data. Frequentist shines when you want to defend a result without arguing about the prior. With enough data and a flat prior they give numerically identical intervals and just different sentences to say them with.
+
+**When Bayesian is the explicit better choice in Statsig:**
+- **Sequential / always-valid testing** (LO2) — the natural language of "what's the posterior probability now?" maps onto "I want to peek" without needing alpha-spending math.
+- **Small N studies** (small startups, early-stage products) where the prior is informative.
+- **Stakeholder communication** — "85% probability of positive lift" is easier to defend in a non-technical meeting than "p = 0.07, fail to reject the null."
+
 ---
 
 ### LO2. Understand fixed-horizon vs always-valid (sequential) inference.
@@ -110,6 +133,36 @@ Output: required sample size per arm. Divide by your daily traffic on the surfac
 - Highly seasonal metrics where the pre-period doesn't predict the experiment period
 
 **Effect:** can reduce required sample size by 20-50% on suitable metrics. Both Statsig and Amplitude Experiment offer CUPED.
+
+**Worked example:**
+
+You're running an experiment on revenue per user. Pre-experiment, you have each user's revenue from the prior 4 weeks.
+
+Without CUPED:
+- Measured metric: `Y` = revenue during the 2-week experiment per user.
+- A few whales dominate Y. Variance is high. To detect a +2% lift, you need ~80,000 users per arm.
+
+With CUPED:
+- Adjusted metric: `Y_cuped = Y - θ × (X - X̄)`, where:
+  - `X` = each user's pre-experiment revenue (the covariate)
+  - `X̄` = the population mean of `X`
+  - `θ` (the "CUPED coefficient") = `Cov(Y, X) / Var(X)`. In practice this is a regression coefficient — the platform estimates it from the pre-period data.
+- For each user, you subtract the part of their experiment-period revenue that was predictable from their pre-period revenue.
+- The mean of Y_cuped equals the mean of Y (the population-level shift `θ × X̄` is constant) — so the *estimate of the treatment effect is unchanged*.
+- But Var(Y_cuped) < Var(Y) by a factor of (1 − ρ²), where ρ is the correlation between X and Y.
+- If pre-period revenue correlates 0.7 with experiment-period revenue, variance drops by 1 − 0.49 = 51%. Required sample drops by ~half.
+
+**The intuition again, with numbers:**
+- A user spent $100 pre-period. They spend $110 during the experiment. Naïve metric: $110 (huge noise).
+- CUPED: "we expected $100-ish based on pre-period. Actual is $110. Residual is +$10." That residual is what the treatment-effect estimator sees.
+- Whales no longer overwhelm the metric, because the predictable-whale-part has been subtracted out.
+
+**Edge case — when CUPED doesn't help:**
+- **New users with no pre-period data:** `X` is undefined or 0. CUPED contributes nothing for them. Statsig falls back to the unadjusted metric for these users; precision improvement is concentrated on the returning-user subset.
+- **Brand-new metric** the user hasn't generated pre-experiment data for (e.g., new event you just shipped). Same problem.
+- **Metric with low temporal correlation:** if a user's pre-period and experiment-period values are nearly independent, ρ ≈ 0 and Var(Y_cuped) ≈ Var(Y). No benefit.
+
+**Practical sanity check:** Statsig will tell you the variance reduction CUPED achieved on each metric. If it shows <10% variance reduction, the covariate isn't predictive enough to bother enabling on that metric (the small bias-amplification cost can dominate the gain).
 
 ---
 
@@ -211,6 +264,50 @@ Both Statsig and Amplitude Experiment auto-flag SRM. **Take the flag seriously.*
 
 **The fix for the coworker's claim:** ask whether the scorecard applied any correction. If not, the p=0.04 result is probably noise.
 
+**Worked example — Bonferroni:**
+
+Suppose 36 comparisons (12 metrics × 3 variants), uncorrected α = 0.05.
+- Probability *one* comparison is a false positive under the null: 0.05.
+- Probability *all 36* are clean under the null: (1 − 0.05)^36 ≈ 0.158.
+- Probability of *at least one* false positive: 1 − 0.158 ≈ **84.2%**.
+
+Bonferroni-adjusted α = 0.05 / 36 ≈ **0.00139** per comparison.
+- A p-value of 0.04 (the coworker's celebration) → 0.04 > 0.00139 → **fails** at Bonferroni-adjusted threshold. Not significant.
+- For a metric to clear Bonferroni at this scorecard size, it needs p ≤ 0.00139 — roughly equivalent to a z-score around 3.2 instead of the unadjusted 1.96.
+
+Bonferroni is provably conservative. With 36 tests and one true effect of moderate size, Bonferroni often misses it; you lose power proportional to the number of tests.
+
+**Worked example — Benjamini-Hochberg (BH) at FDR = 0.05:**
+
+Same 36 comparisons. Sort the p-values smallest to largest, rank them 1 to 36.
+
+| Rank `i` | p-value | BH threshold = (i / 36) × 0.05 | Significant? |
+|---|---|---|---|
+| 1 | 0.0008 | 0.00139 | yes |
+| 2 | 0.0017 | 0.00278 | yes |
+| 3 | 0.0028 | 0.00417 | yes |
+| 4 | 0.0091 | 0.00556 | no |
+| 5 | 0.012 | 0.00694 | no |
+| ... | ... | ... | ... |
+| 12 | 0.04 | 0.01667 | no |
+| ... | ... | ... | ... |
+
+BH walks from the bottom up and finds the **largest `i` where p_i ≤ (i/36) × 0.05** — call that `k`. Then everything from rank 1 to `k` is called significant.
+
+In this hypothetical: largest `i` where p_i ≤ threshold is `i = 3` (p = 0.0028 ≤ 0.00417). So the top 3 p-values are significant; ranks 4-36 are not.
+
+The coworker's p = 0.04 sits at rank 12 (or wherever) — well above its BH threshold of 0.01667. Not significant under BH either.
+
+**Why BH beats Bonferroni in practice:**
+- Bonferroni controls *family-wise error rate*: "probability of any false positive in the family." Brutal when the family is large.
+- BH controls *false discovery rate*: "expected fraction of false positives among the things we call significant." If you call 10 things significant under BH, you're saying "at most 0.5 of those are likely noise" — a calibrated, useful guarantee.
+- BH gives strictly more power than Bonferroni when there are real effects. Use Bonferroni only when even one false positive is unacceptable (regulatory contexts).
+
+**Per-family vs. across-family correction:**
+- **Across primary metrics:** apply BH within primary tier (e.g., 3 primary metrics × 3 variants = 9 tests).
+- **Across all metrics:** more conservative — apply BH to the union of primary + secondary + guardrails.
+- Statsig's default is to correct primary tier separately from secondaries, on the reasoning that secondaries are exploratory and shouldn't compete with primaries for alpha.
+
 ---
 
 ### LO11. Use AA tests to validate the experimentation pipeline.
@@ -284,6 +381,33 @@ Result: confidence intervals on ratio metrics are accurate even though the under
 - **Recognize when a metric is a ratio.** Anything per-user, per-session, or per-event with a variable denominator. If the platform flags "delta method applied," that's correct behavior.
 
 **For relative lifts** (e.g., "+5% relative to control"), platforms sometimes use a related approach called **Fieller intervals**, which the delta method approximates for large samples.
+
+**Worked example — what goes wrong without the delta method:**
+
+Metric: clicks per session. Each user has multiple sessions and multiple clicks. Suppose:
+- Control: 10,000 users contributed 50,000 sessions and 2,500 clicks. Ratio = 2,500 / 50,000 = **0.050 clicks/session**.
+- Treatment: 10,000 users contributed 50,000 sessions and 2,700 clicks. Ratio = 2,700 / 50,000 = **0.054 clicks/session**.
+- Observed lift: +0.004 clicks/session (+8% relative).
+
+**Naïve approach (wrong):** treat each *session* as an independent observation. Variance of clicks-per-session over the 100,000 sessions gives a tight standard error, suggesting the +0.004 lift is highly significant.
+
+**The problem:** sessions from the same user are *not* independent. A user with 10 sessions and 5 clicks contributes 10 "observations" of 0.5 clicks/session, all driven by the same underlying user behavior. The effective sample size is closer to the number of *users* (10,000) than the number of *sessions* (50,000). The naïve standard error is too small by a factor proportional to √(sessions per user).
+
+**Delta method correctly handles it:**
+- Treat the metric as `R = mean(clicks_per_user) / mean(sessions_per_user)`.
+- Compute `Var(R) ≈ (1 / mean(sessions))² × [Var(clicks) − 2 × R × Cov(clicks, sessions) + R² × Var(sessions)]`.
+- The covariance term `Cov(clicks, sessions)` is typically positive (users who session more also click more), which the formula correctly accounts for.
+- Result: a wider, accurate CI on R. Often the variance of a ratio metric ends up 1.5-4× larger than the naïve estimate.
+
+**In our example:** the naïve CI might say [+0.0035, +0.0045], suggesting the +0.004 lift is locked in. The delta-method CI might say [+0.001, +0.007] — still positive, but with much more honest uncertainty. The decision changes from "obvious ship" to "ship but recognize the wider band."
+
+**Two practical implications:**
+1. **Don't compute ratio metric CIs by hand from row-level event data.** You need to either roll up to the user level first (and even then mind the per-user-session counts) or use a tool that applies the delta method automatically.
+2. **Watch for "this metric got more significant when we increased the sample" with no other change.** That can mean the naïve method is over-counting independence. The delta-method-corrected significance grows more slowly than the naïve method, which is the correct behavior.
+
+**When the delta method ISN'T enough:**
+- Highly skewed numerators with rare events (e.g., revenue per user where most users have zero revenue). The Taylor approximation under the delta method assumes near-normality and breaks down. Use bootstrap or log-transformed metrics instead.
+- Very small samples — the delta method's variance estimate has its own variance, which matters when N < ~100.
 
 ---
 
