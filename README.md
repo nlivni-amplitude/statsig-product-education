@@ -8,7 +8,8 @@ Public content corpus for the `statsig-learn` Claude skills published by the Amp
 
 | Directory | Contents | Source |
 |---|---|---|
-| `topics/` | 11 LXD-curated topic files with learning objectives + canonical answers | LXD synthesis of public Statsig content |
+| `topics/` | 12 LXD-curated topic files with learning objectives + canonical answers | LXD synthesis of public Statsig content |
+| `features/` | 27 feature pages (one per Statsig feature) + `_index.md` catalog. Each page is a hub: primary docs, related doc pages, Academy courses, Wistia videos, YouTube videos, Amplitude counterpart, and the topic LOs where it's taught | Built from `indexes/feature-comparison-inventory.json` + the other resource maps |
 | `corpus/courses/` | 3 Statsig Academy course MDs | [academy.amplitude.com](https://academy.amplitude.com/statsig-101) |
 | `corpus/captions/` | 41 lesson video captions | Publicly-streamed Wistia videos on academy.amplitude.com |
 | `corpus/captions-combined/` | 3 combined-by-course caption files (one per Statsig U course) | Same as `captions/`, just grouped |
