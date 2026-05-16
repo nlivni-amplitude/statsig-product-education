@@ -8,13 +8,14 @@ match_quality: close
 
 # Event Ingestion
 
-**What it is:** Both support direct SDK, CDP relay (Segment/RudderStack), and warehouse import
+**What it is:** How events get into Statsig: direct SDK, CDP relay (Segment/RudderStack/mParticle), warehouse import. Same event schema regardless of source.
 
 ## Amplitude counterpart
 
 - **Concept:** Event ingestion (SDK / Segment / warehouse)
 - **Match quality:** close
 - **Key differences:**
+  - Both support direct SDK, CDP relay (Segment/RudderStack), and warehouse import
   - Statsig favors Metric Catalog as central registry; Amplitude favors event taxonomy
 - **Amplitude docs:**
   - https://amplitude.com/docs/partners/create-an-event-ingestion-integration

@@ -8,13 +8,14 @@ match_quality: close
 
 # Experiments (A/B testing)
 
-**What it is:** Both run A/B and multivariate tests with scorecards and statistical analysis
+**What it is:** Statsig's experimentation surface. Run A/B and multivariate tests with traffic allocation, targeting, primary/secondary/guardrail metrics, and a scorecard with confidence intervals and p-values.
 
 ## Amplitude counterpart
 
 - **Concept:** Amplitude Experiment
 - **Match quality:** close
 - **Key differences:**
+  - Both run A/B and multivariate tests with scorecards and statistical analysis
   - Statsig per-user normalizes by default; Amplitude has options
   - Both support warehouse-native modes
 - **Amplitude docs:**

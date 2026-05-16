@@ -8,13 +8,14 @@ match_quality: partial
 
 # Dynamic Configs
 
-**What it is:** Statsig Dynamic Configs are first-class objects with dedicated SDK calls
+**What it is:** First-class JSON-payload configs delivered through the SDK. Lets you change values (copy, thresholds, feature parameters) without a deploy. Schema-enforceable.
 
 ## Amplitude counterpart
 
 - **Concept:** Amplitude Experiment payloads
 - **Match quality:** partial
 - **Key differences:**
+  - Statsig Dynamic Configs are first-class objects with dedicated SDK calls
   - Amplitude payloads are an attribute of an experiment variant
 - **Amplitude docs:**
   - https://amplitude.com/docs/data/configure-schema

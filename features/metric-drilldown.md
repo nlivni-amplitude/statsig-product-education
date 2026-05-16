@@ -8,13 +8,14 @@ match_quality: close
 
 # Metric Drilldown
 
-**What it is:** Both slice a single metric by user/event properties to investigate movement
+**What it is:** Slice a single metric by user/event properties to see which segment is driving the movement. Comparable to Amplitude segmentation.
 
 ## Amplitude counterpart
 
 - **Concept:** Segmentation
 - **Match quality:** close
 - **Key differences:**
+  - Both slice a single metric by user/event properties to investigate movement
   - Different naming for similar UX
 - **Amplitude docs:**
   - https://amplitude.com/docs/analytics/charts/event-segmentation/faq

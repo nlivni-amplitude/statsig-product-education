@@ -8,13 +8,14 @@ match_quality: close
 
 # Layers / Mutually Exclusive Experiments
 
-**What it is:** Both prevent interaction effects across overlapping experiments
+**What it is:** Group experiments into a layer so a single user only ever enters one experiment in that layer. Prevents interaction effects across overlapping tests.
 
 ## Amplitude counterpart
 
 - **Concept:** Shared layers in Amplitude Experiment
 - **Match quality:** close
 - **Key differences:**
+  - Both prevent interaction effects across overlapping experiments
   - Different UI for assignment; same conceptual model
 - **Amplitude docs:**
   - https://amplitude.com/docs/feature-experiment/advanced-techniques/mutually-exclusive-experiments

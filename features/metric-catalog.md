@@ -8,13 +8,14 @@ match_quality: partial
 
 # Metric Catalog
 
-**What it is:** Statsig: first-class central registry of metric definitions
+**What it is:** Central registry of metric definitions. A metric defined once is referenced from every experiment, dashboard, and chart — change the definition in one place.
 
 ## Amplitude counterpart
 
 - **Concept:** Event Taxonomy + Custom Metrics
 - **Match quality:** partial
 - **Key differences:**
+  - Statsig: first-class central registry of metric definitions
   - Amplitude: event-stream-shaped, metrics built ad-hoc in each chart with Custom Metrics available
 - **Amplitude docs:**
   - https://amplitude.com/docs/data/taxonomy-api

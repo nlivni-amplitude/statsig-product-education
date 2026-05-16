@@ -8,13 +8,14 @@ match_quality: close
 
 # Funnels
 
-**What it is:** Near-1:1 conceptually
+**What it is:** Step-by-step conversion analysis: count users who completed step N given they completed N-1, with drop-off and time-to-convert per step.
 
 ## Amplitude counterpart
 
 - **Concept:** Funnel Analysis
 - **Match quality:** close
 - **Key differences:**
+  - Near-1:1 conceptually
   - Both compute conversion rate, drop-off, time-to-convert across ordered steps
 - **Amplitude docs:**
   - https://amplitude.com/docs/analytics/charts/funnel-analysis/faq

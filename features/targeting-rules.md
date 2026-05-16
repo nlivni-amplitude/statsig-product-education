@@ -8,13 +8,14 @@ match_quality: close
 
 # Targeting Rules
 
-**What it is:** Both filter users by attributes, event history, custom properties
+**What it is:** Define which users see a gate or experiment by filtering on user attributes, event history, segments, or custom properties. Combined with allocation percentages.
 
 ## Amplitude counterpart
 
 - **Concept:** Cohort + Experiment Audience
 - **Match quality:** close
 - **Key differences:**
+  - Both filter users by attributes, event history, custom properties
   - Mechanics and rule-builder UI differ
 - **Amplitude docs:**
   - https://amplitude.com/docs/feature-experiment/cohort-targeting

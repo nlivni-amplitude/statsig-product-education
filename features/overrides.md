@@ -8,13 +8,14 @@ match_quality: close
 
 # Overrides
 
-**What it is:** Both allow manual user-level opt-in/out of a flag/gate
+**What it is:** Manual per-user opt-in/opt-out for a gate or experiment. Used for QA, demos, support cases, and forcing specific users into specific variants.
 
 ## Amplitude counterpart
 
 - **Concept:** User overrides in Amplitude Experiment
 - **Match quality:** close
 - **Key differences:**
+  - Both allow manual user-level opt-in/out of a flag/gate
   - Use for one-off testing and demos, not as a permanent fix for rule bugs
 - **Amplitude docs:**
   - https://amplitude.com/docs/data/override-property

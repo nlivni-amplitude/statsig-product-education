@@ -9,13 +9,14 @@ audit_flagged_shallow: true
 
 # Target Apps
 
-**What it is:** Statsig has scoped-context Target Apps as a first-class object
+**What it is:** Scoped contexts within a project (e.g. iOS app vs Android app vs web app). First-class object in Statsig that affects gate evaluation. Not a direct Amplitude analog.
 
 ## Amplitude counterpart
 
 - **Concept:** (No direct Amplitude equivalent)
 - **Match quality:** none
 - **Key differences:**
+  - Statsig has scoped-context Target Apps as a first-class object
   - Amplitude scopes via user properties or environment filters instead
 
 ## Primary Statsig docs

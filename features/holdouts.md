@@ -8,13 +8,14 @@ match_quality: close
 
 # Holdouts
 
-**What it is:** Same statistical concept on both sides
+**What it is:** A population kept out of all experiments (control) for an extended period. Lets you measure the cumulative impact of your experimentation program across many tests.
 
 ## Amplitude counterpart
 
 - **Concept:** Holdout cohorts in Amplitude Experiment
 - **Match quality:** close
 - **Key differences:**
+  - Same statistical concept on both sides
   - Used to measure program-level impact (not single-experiment)
 - **Amplitude docs:**
   - https://amplitude.com/docs/apis/experiment/experiment-management-api-holdouts

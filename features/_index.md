@@ -31,6 +31,8 @@ docs, Amplitude Academy courses, internal videos, YouTube, topic LOs, and the Am
 - [Holdouts](holdouts.md) — close match to *Holdout cohorts in Amplitude Experiment*
 - [Layers / Mutually Exclusive Experiments](layers-mutually-exclusive-experiments.md) — close match to *Shared layers in Amplitude Experiment*
 - [Pulse / Scorecard](pulse-scorecard.md) — close match to *Experiment Results*
+- [Aggregated Impact](aggregated-impact.md) ⚠️ — none match to *(No direct Amplitude equivalent)*
+- [Differential Impact Detection](differential-impact-detection.md) ⚠️ — partial match to *Heterogeneous treatment effects (manual)*
 
 ## Product analytics
 
@@ -41,6 +43,8 @@ docs, Amplitude Academy courses, internal videos, YouTube, topic LOs, and the Am
 - [Metric Drilldown](metric-drilldown.md) — close match to *Segmentation*
 - [Distribution Charts](distribution-charts.md) — close match to *Distribution / Histogram*
 - [Dashboards](dashboards.md) — close match to *Dashboards / Notebooks*
+- [Topline Alerts](topline-alerts.md) ⚠️ — partial match to *Anomaly Detection (Amplitude Analytics)*
+- [Web Analytics](web-analytics.md) ⚠️ — partial match to *Amplitude Analytics (autocapture)*
 
 ## Session replay
 
@@ -57,3 +61,8 @@ docs, Amplitude Academy courses, internal videos, YouTube, topic LOs, and the Am
 - [Org / Project / Team Structure](org-project-team-structure.md) — close match to *Org / Workspace / Project*
 - [Target Apps](target-apps.md) ⚠️ — none match to *(No direct Amplitude equivalent)*
 - [SSO / RBAC](sso-rbac.md) — close match to *SSO + RBAC*
+
+## Features without a teaching topic yet
+
+- [AI Evals](ai-evals.md) ⚠️ — none match to *(No direct Amplitude equivalent)*
+- [Release Pipeline](release-pipeline.md) ⚠️ — none match to *(No direct Amplitude equivalent)*

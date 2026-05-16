@@ -9,13 +9,14 @@ audit_flagged_shallow: true
 
 # Session Replay
 
-**What it is:** Both record DOM + interactions, play back
+**What it is:** Capture and replay user sessions (DOM + interactions) with privacy controls. Tied to events so you can jump from a funnel drop-off to the replays of users who dropped.
 
 ## Amplitude counterpart
 
 - **Concept:** Amplitude Session Replay
 - **Match quality:** close
 - **Key differences:**
+  - Both record DOM + interactions, play back
   - Statsig anchors to experiments; Amplitude anchors to Analytics charts
   - Pricing and sampling specifics differ
 - **Amplitude docs:**

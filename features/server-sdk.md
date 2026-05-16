@@ -8,13 +8,14 @@ match_quality: partial
 
 # Server SDK
 
-**What it is:** Same modular split as client side
+**What it is:** Node, Python, Go, Java, Ruby, .NET, PHP, Rust, Elixir SDKs. Server-side gate eval, experiment exposure, and event logging.
 
 ## Amplitude counterpart
 
 - **Concept:** Amplitude Node/Python/Java SDK
 - **Match quality:** partial
 - **Key differences:**
+  - Same modular split as client side
   - Statsig bundles; Amplitude separates analytics from experiment evaluation
 - **Amplitude docs:**
   - https://amplitude.com/docs/sdks/analytics/node

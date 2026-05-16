@@ -8,13 +8,14 @@ match_quality: close
 
 # Warehouse-Native Experimentation
 
-**What it is:** Both query the customer's data warehouse directly instead of streaming events
+**What it is:** Run experiments directly against your data warehouse (Snowflake, BigQuery, Databricks, Athena) without streaming events through Statsig. Same scorecard, your data stays put.
 
 ## Amplitude counterpart
 
 - **Concept:** Amplitude Experiment (warehouse mode)
 - **Match quality:** close
 - **Key differences:**
+  - Both query the customer's data warehouse directly instead of streaming events
   - Different schema configuration patterns; same underlying statistical compute
 - **Amplitude docs:**
   - https://amplitude.com/docs/web-experiment

@@ -8,13 +8,14 @@ match_quality: close
 
 # Product Analytics (suite)
 
-**What it is:** Both have funnels, retention, dashboards, drilldown
+**What it is:** Statsig's analytics surface: funnels, retention, paths, distribution, drilldown, dashboards. Sits on top of the same event stream as experiments.
 
 ## Amplitude counterpart
 
 - **Concept:** Amplitude Analytics
 - **Match quality:** close
 - **Key differences:**
+  - Both have funnels, retention, dashboards, drilldown
   - Amplitude is more mature: Pathfinder, Compass, Personas, Stickiness, Recommendations
 - **Amplitude docs:**
   - https://amplitude.com/docs/analytics

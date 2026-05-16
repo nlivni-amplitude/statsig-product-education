@@ -8,13 +8,14 @@ match_quality: close
 
 # User Journeys / Paths
 
-**What it is:** Both show paths between events
+**What it is:** Sankey-style visualization of the most common event sequences before/after a chosen event. Surfaces flows you didn't anticipate.
 
 ## Amplitude counterpart
 
 - **Concept:** Pathfinder / Compass
 - **Match quality:** close
 - **Key differences:**
+  - Both show paths between events
   - Amplitude has multiple path-analysis surfaces (Pathfinder, Compass) with different defaults
 - **Amplitude docs:**
   - https://amplitude.com/docs/analytics/charts/legacy-charts/legacy-charts-pathfinder

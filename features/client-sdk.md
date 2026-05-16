@@ -8,13 +8,14 @@ match_quality: partial
 
 # Client SDK
 
-**What it is:** Statsig client SDK does flags + experiments + exposures + analytics in one
+**What it is:** Browser, iOS, Android, React Native SDKs. One SDK handles gate evaluation, experiment exposure, event logging, and analytics — not separate libraries.
 
 ## Amplitude counterpart
 
 - **Concept:** Amplitude Browser/iOS/Android SDK
 - **Match quality:** partial
 - **Key differences:**
+  - Statsig client SDK does flags + experiments + exposures + analytics in one
   - Amplitude splits Analytics SDK and Experiment SDK; more modular, more wiring
 - **Amplitude docs:**
   - https://amplitude.com/docs/sdks/analytics/ios

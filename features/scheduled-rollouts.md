@@ -8,13 +8,14 @@ match_quality: close
 
 # Scheduled Rollouts
 
-**What it is:** Progressive percentage rollouts (1% → 5% → 100%)
+**What it is:** Pre-scheduled traffic ramps (e.g. 1% Mon → 5% Wed → 25% Fri → 100% next Mon). Lets you stage releases without a person clicking buttons each step.
 
 ## Amplitude counterpart
 
 - **Concept:** Rollout schedule in Amplitude Experiment
 - **Match quality:** close
 - **Key differences:**
+  - Progressive percentage rollouts (1% → 5% → 100%)
   - Both support automatic revert on guardrail regression
 - **Amplitude docs:**
   - https://amplitude.com/docs/feature-experiment/workflow/feature-flag-rollouts

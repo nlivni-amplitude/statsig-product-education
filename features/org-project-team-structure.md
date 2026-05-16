@@ -8,13 +8,14 @@ match_quality: close
 
 # Org / Project / Team Structure
 
-**What it is:** Org → Org and Project → Workspace map cleanly
+**What it is:** Org contains projects; projects contain environments and resources; users belong to teams with role-based access. Cleanly maps to Amplitude Org / Workspace.
 
 ## Amplitude counterpart
 
 - **Concept:** Org / Workspace / Project
 - **Match quality:** close
 - **Key differences:**
+  - Org → Org and Project → Workspace map cleanly
   - Naming confusion: Statsig 'Team' ≈ Amplitude 'Project' (at the team-equivalent tier)
 - **Amplitude docs:**
   - https://amplitude.com/docs/admin/account-management/manage-orgs-projects

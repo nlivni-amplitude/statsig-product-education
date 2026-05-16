@@ -8,13 +8,14 @@ match_quality: partial
 
 # Feature Gates / Feature Flags
 
-**What it is:** Both target users by attributes with pass-percentages
+**What it is:** On/off (or percentage) switches that control whether code paths are active for which users. Foundation for both rollouts and experiments.
 
 ## Amplitude counterpart
 
 - **Concept:** Amplitude Experiment flags
 - **Match quality:** partial
 - **Key differences:**
+  - Both target users by attributes with pass-percentages
   - Statsig auto-promotes gates to A/B tests; Amplitude separates flag from experiment more cleanly
   - Different SDK API shapes
 - **Amplitude docs:**

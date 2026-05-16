@@ -8,12 +8,14 @@ match_quality: close
 
 # Distribution Charts
 
-**What it is:** Both surface population shape (clusters, long tail) that averages hide
+**What it is:** Histograms of a metric across the population. Surfaces clusters and long tails that averages would hide.
 
 ## Amplitude counterpart
 
 - **Concept:** Distribution / Histogram
 - **Match quality:** close
+- **Key differences:**
+  - Both surface population shape (clusters, long tail) that averages hide
 
 ## Primary Statsig docs
 

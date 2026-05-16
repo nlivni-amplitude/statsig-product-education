@@ -8,13 +8,14 @@ match_quality: close
 
 # Pulse / Scorecard
 
-**What it is:** Same idea: confidence intervals, lift, significance
+**What it is:** The experiment-results view. Per-metric lift, confidence interval, p-value, sample size, and diagnostics across primary, secondary, and guardrail metrics.
 
 ## Amplitude counterpart
 
 - **Concept:** Experiment Results
 - **Match quality:** close
 - **Key differences:**
+  - Same idea: confidence intervals, lift, significance
   - Different visual style; Statsig per-user normalizes by default
 - **Amplitude docs:**
   - https://amplitude.com/docs/get-started/analyze-a-b-test-results

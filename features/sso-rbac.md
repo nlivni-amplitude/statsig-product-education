@@ -8,13 +8,14 @@ match_quality: close
 
 # SSO / RBAC
 
-**What it is:** Both support SAML SSO with major IdPs
+**What it is:** Single sign-on (SAML with major IdPs) and role-based access control. Org/team/project-scoped roles like Admin, Member, Read-only.
 
 ## Amplitude counterpart
 
 - **Concept:** SSO + RBAC
 - **Match quality:** close
 - **Key differences:**
+  - Both support SAML SSO with major IdPs
   - Both have admin/editor/viewer-style roles with project-level scoping
 - **Amplitude docs:**
   - https://amplitude.com/docs/admin/account-management/manage-rbac-roles

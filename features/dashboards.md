@@ -8,13 +8,14 @@ match_quality: close
 
 # Dashboards
 
-**What it is:** Both let you combine multiple charts into a saved view
+**What it is:** Saved multi-chart views you can pin, share, and embed. Combines charts, metrics, and (in Statsig) experiment scorecards in one place.
 
 ## Amplitude counterpart
 
 - **Concept:** Dashboards / Notebooks
 - **Match quality:** close
 - **Key differences:**
+  - Both let you combine multiple charts into a saved view
   - Amplitude has Notebooks for narrative-style analysis
 - **Amplitude docs:**
   - https://amplitude.com/docs/analytics/notebooks

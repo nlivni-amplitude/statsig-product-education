@@ -8,12 +8,14 @@ match_quality: close
 
 # Retention
 
-**What it is:** Both bucket users by cohort and measure return rate at time intervals
+**What it is:** Bucket users by cohort and measure how many return at each time interval. Day-N, week-N, custom-window flavors.
 
 ## Amplitude counterpart
 
 - **Concept:** Retention Analysis
 - **Match quality:** close
+- **Key differences:**
+  - Both bucket users by cohort and measure return rate at time intervals
 - **Amplitude docs:**
   - https://amplitude.com/docs/analytics/charts/retention-analysis/faq
   - https://amplitude.com/docs/analytics/charts/retention-analysis/retention-analysis-time

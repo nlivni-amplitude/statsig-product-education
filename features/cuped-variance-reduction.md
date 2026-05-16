@@ -9,13 +9,14 @@ audit_flagged_shallow: true
 
 # CUPED (variance reduction)
 
-**What it is:** Both reduce noise using pre-experiment behavior as a covariate
+**What it is:** Statistical method that uses each user's pre-experiment behavior as a covariate to reduce noise in the metric. Tighter confidence intervals from the same sample size.
 
 ## Amplitude counterpart
 
 - **Concept:** Variance reduction in Amplitude Experiment
 - **Match quality:** partial
 - **Key differences:**
+  - Both reduce noise using pre-experiment behavior as a covariate
   - Statsig markets CUPED more prominently as a first-class feature
 
 ## Primary Statsig docs

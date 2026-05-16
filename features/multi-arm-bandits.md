@@ -9,13 +9,14 @@ audit_flagged_shallow: true
 
 # Multi-Arm Bandits
 
-**What it is:** Statsig has built-in multi-arm bandit experiments (Autotune)
+**What it is:** Adaptive experiments that dynamically shift traffic toward better-performing variants instead of fixed 50/50 splits. Sold as Autotune. Useful when you want to optimize, not learn.
 
 ## Amplitude counterpart
 
 - **Concept:** (No direct Amplitude equivalent)
 - **Match quality:** none
 - **Key differences:**
+  - Statsig has built-in multi-arm bandit experiments (Autotune)
   - Amplitude lacks a direct equivalent — typically requires integration
 - **Amplitude docs:**
   - https://amplitude.com/docs/feature-experiment/workflow/multi-armed-bandit-experiments
